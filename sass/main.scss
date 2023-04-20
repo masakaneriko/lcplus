@@ -1,8 +1,8 @@
 // Abstracts
 // @import "abstracts/variables";
 @import "abstracts/colors";
-// @import "abstracts/functions";
-// @import "abstracts/mixins";
+@import "abstracts/functions";
+@import "abstracts/mixins";
 
 // Base
 // @import "base/reset";
@@ -26,8 +26,8 @@
 // @import "layout/section";
 // @import "layout/shortcodes";
 
-// // Pages
-// @import "pages/front-page";
+// Pages
+@import "pages/front";
 // @import "pages/about-us";
 // @import "pages/afterschool";
 // @import "pages/blog";

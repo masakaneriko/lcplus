@@ -26,3 +26,14 @@ function enqueue_child_theme_styles()
   wp_enqueue_style('child-style', get_stylesheet_directory_uri() . '/css/main.css', array('parent-style'), CHILD_THEME_VERSION);
 }
 add_action('wp_enqueue_scripts', 'enqueue_child_theme_styles');
+
+
+// Add unique classes to each page
+// function add_page_id_class( $classes ) {
+//   if ( is_page() ) {
+//       global $post;
+//       $classes[] = 'page-' . $post->ID;
+//   }
+//   return $classes;
+// }
+// add_filter( 'body_class', 'add_page_id_class' );

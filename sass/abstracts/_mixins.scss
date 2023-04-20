@@ -1,0 +1,15 @@
+$breakpoints: (
+    "tablet": 768px,
+    "desktop": 1024px,
+);
+
+// Define the mixin
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Invalid breakpoint name: #{$breakpoint}";
+  }
+}
