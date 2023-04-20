@@ -4,7 +4,7 @@ $primary-color: #3dc9b3;
 $accent-color: #ef6461;
 $alabaster-color: #e6ebe0;
 
-$onyx-color: #313638;
+$raisin-black-color: #313638;
 $slate-color: #727f83;
 $silver-color: #c8ced0;
 $light-gray-color: #f3f4f5;
@@ -35,8 +35,10 @@ $colors: (
     light: ligten($alabaster-color, $lighten),
     dark: darken($alabaster-color, $darken),
   ),
-  onyx: (
-    base: $onyx-color,
+  raisin-black: (
+    base: $raisin-black-color,
+    light: lighten($raisin-black-color, $lighten),
+    dark: darken($raisin-black-color, $darken),
   ),
   slate: (
     base: $slate-color,
