@@ -1,0 +1,53 @@
+// Colors
+$primary-color: #006934;
+$secondary-color: #f29600;
+$gray-color: #c4c4c4;
+
+$red-color: #940012;
+$blue-color: #2d49ac;
+$yellow-color: #f7b116;
+$pink-color: #ff686b;
+
+$black-board: #27333b;
+
+$lighten: 15;
+$darken: 25;
+
+// Color Map
+$colors: (
+    primary: (
+        base: $primary-color,
+        light: #e4efe7,
+        dark: darken($primary-color, $darken),
+    ),
+    secondary: (
+        base: $secondary-color,
+        light: #fef6d7,
+        dark: darken($secondary-color, $darken),
+    ),
+    gray: (
+        base: $gray-color,
+        light: #d3d3d3,
+        dark: #69777f,
+    ),
+    red: (
+        base: $red-color,
+        light: lighten($red-color, $lighten),
+        dark: lighten($red-color, $darken),
+    ),
+    blue: (
+        base: $blue-color,
+        light: lighten($blue-color, $lighten),
+        dark: darken($blue-color, $darken),
+    ),
+    yellow: (
+        base: $yellow-color,
+        light: lighten($yellow-color, $lighten),
+        dark: darken($yellow-color, $darken),
+    ),
+    pink: (
+        base: $pink-color,
+        light: lighten($pink-color, $lighten),
+        dark: darken($pink-color, $darken),
+    ),
+);
