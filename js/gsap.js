@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     duration: 1.3,
     scale: 0,
     ease: "back",
-    delay: 2.5,
+    delay: 1,
   })
   .from(".hero-image-center", {
     opacity: 0,
@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", function() {
   )
   .from(".hero-image-left", {
     opacity: 0,
-    duration: 1,
+    duration: 1.2,
   })
   .from(".hero-image-right", {
     opacity: 0,
-    duration: 1,
+    duration: 1.35,
   },
   ">-0.5"
   );

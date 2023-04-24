@@ -28,3 +28,20 @@ h3 {
 h4 {
   font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
+p {
+  font-weight: 700;
+}
+
+.title-border-left {
+  position: relative;
+  &::before {
+    content: "";
+    width: 0.2em;
+    background: get-color(raisin-black);
+    height: 90%;
+    position: absolute;
+    left: -0.7em;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

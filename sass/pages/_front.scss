@@ -60,6 +60,8 @@
     .lc-rotate-plus {
       position: absolute;
       max-width: 60%;
+      animation: spin 1s linear infinite;
+
     }
     @keyframes spin {
       from {
@@ -83,15 +85,20 @@
   }
 
   // ABOUT US SECTION
-  .swiper-wrapper {
-    -webkit-transition-timing-function: linear !important;
-    -o-transition-timing-function: linear !important;
-    transition-timing-function: linear !important;
-  }
   .group-slider {
     h3 {
       text-align: center;
       margin: 4rem 0 3rem;
+    }
+
+    .swiper-wrapper {
+      -webkit-transition-timing-function: linear !important;
+      -o-transition-timing-function: linear !important;
+      transition-timing-function: linear !important;
+    }
+
+    .swiper-slide p {
+      text-align: center;
     }
   }
 }
