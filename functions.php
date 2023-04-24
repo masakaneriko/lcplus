@@ -14,7 +14,7 @@ function enqueue_google_fonts()
 {
   wp_enqueue_style( 'google-font-poppins', 'https://fonts.googleapis.com/css?family=Poppins:400,700', array(), CHILD_THEME_VERSION );
   wp_enqueue_style( 'google-font-notosansjp', 'https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700', array(), CHILD_THEME_VERSION );
-
+  wp_enqueue_style( 'font-yakuhanjp', 'https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanjp.min.css', array(), CHILD_THEME_VERSION );
 }
 add_action('wp_enqueue_scripts', 'enqueue_google_fonts');
 
@@ -27,13 +27,3 @@ function enqueue_child_theme_styles()
 }
 add_action('wp_enqueue_scripts', 'enqueue_child_theme_styles');
 
-
-// Add unique classes to each page
-// function add_page_id_class( $classes ) {
-//   if ( is_page() ) {
-//       global $post;
-//       $classes[] = 'page-' . $post->ID;
-//   }
-//   return $classes;
-// }
-// add_filter( 'body_class', 'add_page_id_class' );

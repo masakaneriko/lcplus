@@ -7,8 +7,17 @@ get_header(); ?>
 
 
 <main>
-  <div>YUM YUM</div>
-  <img style="min-height: 70vh" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReFFZ-Hq0f9ovUT9-2K4n0xb-czaY4E2DdYR_NaZY4&s" alt="">
+  <!-- <div class="hero">
+    <div class="hero-text">
+      <span>
+      Web・チラシ・看板で
+      </span>
+      <h1>
+        御社の魅力を発信します
+      </h1>
+    </div>
+    <img style="min-height: 70vh" src="<?php echo get_stylesheet_directory_uri(); ?>/images/fv.png" alt="">
+  </div> -->
   <?php
   // Start the loop
   while (have_posts()) :
