@@ -34,6 +34,7 @@ p {
 
 .title-border-left {
   position: relative;
+  left: 0.7em;
   &::before {
     content: "";
     width: 0.2em;

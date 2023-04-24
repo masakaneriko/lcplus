@@ -33,6 +33,7 @@ p {
 
 .title-border-left {
   position: relative;
+  left: 0.7em;
 }
 .title-border-left::before {
   content: "";
