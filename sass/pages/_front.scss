@@ -1,3 +1,97 @@
 .page-id-8 {
-  // background: get-color(primary);
+
+  #hero {
+    background: url(../images/fv_bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 90vh;
+    position: relative;
+
+    .hero-text {
+      text-align: center;
+      text-shadow: 2px 2px 5px white;
+      margin-top: 5rem;
+    }
+
+    .hero-image {
+      position: relative;
+      display: block;
+      max-width: 500px;
+      margin: auto;
+
+      img {
+        display: block;
+      }
+      .hero-image-left,
+      .hero-image-right {
+        position: absolute;
+        max-width: 250px;
+      }
+      .hero-image-left {
+        left: -27%;
+        bottom: -5%;
+        animation: ticktock 3s infinite ease-in-out;
+      }
+      .hero-image-right {
+        right: -27%;
+        top: 5%;
+        animation: ticktock 1s infinite 0.3s ease-in-out;
+      }
+    }
+  }
+
+  .lc-rotate {
+    position: relative;
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    top: -100px;
+    z-index: 10;
+    margin-right: 0;
+    margin-left: auto;
+
+    .lc-rotate-text {
+      position: absolute;
+      animation: spin 10s linear reverse infinite;
+    }
+
+    .lc-rotate-plus {
+      position: absolute;
+      max-width: 60%;
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes ticktock {
+      0% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(2deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  // ABOUT US SECTION
+  .swiper-wrapper {
+    -webkit-transition-timing-function: linear !important;
+    -o-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+  }
+  .group-slider {
+    h3 {
+      text-align: center;
+      margin: 4rem 0 3rem;
+    }
+  }
 }

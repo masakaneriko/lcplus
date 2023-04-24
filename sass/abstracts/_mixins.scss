@@ -13,3 +13,21 @@ $breakpoints: (
     @warn "Invalid breakpoint name: #{$breakpoint}";
   }
 }
+
+@mixin rainbow-text($start-color, $end-color) {
+  background: linear-gradient(to right, $start-color, $end-color);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text 2s ease-in-out alternate-reverse infinite;
+  
+  @keyframes rainbow-text {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+  }
+}

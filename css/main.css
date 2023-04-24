@@ -1,3 +1,108 @@
 body {
   font-family: "Poppins", YakuHanJP, "Noto Sans JP", sans-serif;
 }
+
+h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+}
+h1 .sub-title {
+  display: block;
+  font-size: clamp(0.9rem, 2vw, 2.25rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+h4 {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.page-id-8 #hero {
+  background: url(../images/fv_bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 90vh;
+  position: relative;
+}
+.page-id-8 #hero .hero-text {
+  text-align: center;
+  text-shadow: 2px 2px 5px white;
+  margin-top: 5rem;
+}
+.page-id-8 #hero .hero-image {
+  position: relative;
+  display: block;
+  max-width: 500px;
+  margin: auto;
+}
+.page-id-8 #hero .hero-image img {
+  display: block;
+}
+.page-id-8 #hero .hero-image .hero-image-left,
+.page-id-8 #hero .hero-image .hero-image-right {
+  position: absolute;
+  max-width: 250px;
+}
+.page-id-8 #hero .hero-image .hero-image-left {
+  left: -27%;
+  bottom: -5%;
+  animation: ticktock 3s infinite ease-in-out;
+}
+.page-id-8 #hero .hero-image .hero-image-right {
+  right: -27%;
+  top: 5%;
+  animation: ticktock 1s infinite 0.3s ease-in-out;
+}
+.page-id-8 .lc-rotate {
+  position: relative;
+  display: flex;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  top: -100px;
+  z-index: 10;
+  margin-right: 0;
+  margin-left: auto;
+}
+.page-id-8 .lc-rotate .lc-rotate-text {
+  position: absolute;
+  animation: spin 10s linear reverse infinite;
+}
+.page-id-8 .lc-rotate .lc-rotate-plus {
+  position: absolute;
+  max-width: 60%;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ticktock {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.page-id-8 .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+.page-id-8 .group-slider h3 {
+  text-align: center;
+  margin: 4rem 0 3rem;
+}
