@@ -1,6 +1,6 @@
 <?php
 
-function group_slider_shortcode() {
+function slider_group_shortcode() {
   ob_start(); ?>
 
   <div class="group-slider">
@@ -46,4 +46,4 @@ function group_slider_shortcode() {
   <?php
   return ob_get_clean();
 }
-add_shortcode( 'group_slider', 'group_slider_shortcode' );
+add_shortcode( 'slider_group', 'slider_group_shortcode' );
