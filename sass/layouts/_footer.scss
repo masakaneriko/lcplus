@@ -1,0 +1,16 @@
+#footer {
+  background: url(../images/company_04.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  filter: invert(1);
+
+  .l-footer__foot {
+    .l-container {
+      display: flex;
+      
+      & > * {
+        flex: 1;
+      }
+    }
+  }
+}
