@@ -93,6 +93,19 @@ p {
   fill: #9bc1bc;
 }
 
+#footer {
+  background: url(../images/company_04.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  filter: invert(1);
+}
+#footer .l-footer__foot .l-container {
+  display: flex;
+}
+#footer .l-footer__foot .l-container > * {
+  flex: 1;
+}
+
 .page-id-8 #hero {
   background: url(../images/fv_bg.png);
   background-size: contain;

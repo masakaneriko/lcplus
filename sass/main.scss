@@ -13,18 +13,17 @@
 // // Components
 // @import "components/buttons";
 // @import "components/youtube";
-@import "components/background";
 // @import "components/decorations";
 // @import "components/table";
 
 // // Layouts
-// @import "layout/footer";
+@import "layouts/background";
+@import "layouts/footer";
 // @import "layout/header";
 // @import "layout/hero";
 // @import "layout/intro";
 // @import "layout/navigation";
 // @import "layout/section";
-// @import "layout/shortcodes";
 
 // Pages
 @import "pages/front";
