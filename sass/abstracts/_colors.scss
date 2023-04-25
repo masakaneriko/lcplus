@@ -1,6 +1,7 @@
 // Colors
-$primary-color: #3dc9b3;
+$primary-color: #9bc1bc;
 // $secondary-color: #235789;
+$secondary-color: #f7f7f7;
 $accent-color: #ef6461;
 $alabaster-color: #e6ebe0;
 
@@ -19,11 +20,11 @@ $colors: (
     light: ligten($primary-color, $lighten),
     dark: darken($primary-color, $darken),
   ),
-  // secondary: (
-  //     base: $secondary-color,
-  //     light: #fef6d7,
-  //     dark: darken($secondary-color, $darken),
-  // ),
+  secondary: (
+      base: $secondary-color,
+      light: lighten($secondary-color, $darken),
+      dark: darken($secondary-color, $darken),
+  ),
   accent:
     (
       base: $accent-color,
