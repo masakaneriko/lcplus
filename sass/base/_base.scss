@@ -5,3 +5,11 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
+.wpforms-submit-container {
+  display: flex;
+  justify-content: center;
+}
+.wpforms-submit {
+  background-color: get-color(primary)!important;
+}

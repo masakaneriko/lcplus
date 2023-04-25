@@ -7,6 +7,15 @@ a {
   cursor: pointer;
 }
 
+.wpforms-submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+.wpforms-submit {
+  background-color: #9bc1bc !important;
+}
+
 body {
   font-family: "Poppins", YakuHanJP, "Noto Sans JP", sans-serif;
 }
