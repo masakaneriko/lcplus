@@ -43,5 +43,6 @@ add_action('wp_enqueue_scripts', 'front_page_enqueue_script');
 
 // Include shortcodes.php
 require_once(get_stylesheet_directory() . '/shortcodes/group-slider.php');
+require_once(get_stylesheet_directory() . '/shortcodes/tilt-bg.php');
 
 

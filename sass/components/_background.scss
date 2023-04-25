@@ -1,0 +1,31 @@
+$height: 60px;
+
+.tilt-bg {
+  position: relative;
+  height: $height;
+}
+.tilt-bg.tilt-bg-top {
+  transform: scale(-1);
+}
+
+.custom-shape-divider-top-1682382870 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: 0;
+}
+
+.custom-shape-divider-top-1682382870 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: $height;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1682382870 .shape-fill {
+  fill: #9bc1bc;
+}

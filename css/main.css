@@ -1,3 +1,7 @@
+body {
+  background: #f7f7f7;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -5,6 +9,7 @@ a {
 
 body {
   font-family: "Poppins", YakuHanJP, "Noto Sans JP", sans-serif;
+  color: #313638;
 }
 
 h1 {
@@ -44,6 +49,37 @@ p {
   left: -0.7em;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.tilt-bg {
+  position: relative;
+  height: 60px;
+}
+
+.tilt-bg.tilt-bg-top {
+  transform: scale(-1);
+}
+
+.custom-shape-divider-top-1682382870 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin-top: 0;
+}
+
+.custom-shape-divider-top-1682382870 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 60px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1682382870 .shape-fill {
+  fill: #9bc1bc;
 }
 
 .page-id-8 #hero {
