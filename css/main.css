@@ -101,9 +101,38 @@ p {
 }
 #footer .l-footer__foot .l-container {
   display: flex;
+  align-items: center;
 }
-#footer .l-footer__foot .l-container > * {
+#footer .l-footer__foot .l-container .footer-column {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#footer .l-footer__foot .l-container .footer-column .footer-logo {
+  background: white;
+}
+#footer .l-footer__foot .l-container .footer-column .sns-icons {
+  display: flex;
+  justify-content: center;
+}
+#footer .l-footer__foot .l-container .footer-column .sns-icons div {
+  width: 100px;
+  height: 100px;
+  background: magenta;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+#footer .l-footer__foot .l-container ul {
+  flex: 2;
+  flex-flow: column wrap;
+  max-height: 100%;
+  height: 100px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: 2rem;
+  color: black;
+  font-weight: 700;
 }
 
 .page-id-8 #hero {
@@ -193,4 +222,15 @@ p {
 }
 .page-id-8 .group-slider .swiper-slide p {
   text-align: center;
+}
+.page-id-8 .qanda {
+  background: url(../images/qanda.png) no-repeat;
+  background-size: cover;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.page-id-8 .qanda .arkp-scFaq01 {
+  background: white;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
 }
