@@ -194,3 +194,14 @@ p {
 .page-id-8 .group-slider .swiper-slide p {
   text-align: center;
 }
+.page-id-8 .qanda {
+  background: url(../images/qanda.png) no-repeat;
+  background-size: cover;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.page-id-8 .qanda .arkp-scFaq01 {
+  background: white;
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+}
