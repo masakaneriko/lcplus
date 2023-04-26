@@ -25,15 +25,15 @@ $is_active_footer2 = is_active_sidebar('footer-2');
     <?php endif; ?>
     <div class="l-footer__foot">
       <div class="l-container"> <!-- make this flex -->
-        
-      <div class="footer-column">
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="">
-        <div class="sns-icons">
-          <p>twitter</p>
-          <p>twitter</p>
-          <p>twitter</p>
+
+        <div class="footer-column">
+          <img class="footer-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="">
+          <div class="sns-icons">
+            <div>LINE</div>
+            <div>Twitter</div>
+            <div>Instagram</div>
+          </div>
         </div>
-      </div>
 
         <!-- START wp footer menu -->
         <?php
