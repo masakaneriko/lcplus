@@ -20,11 +20,12 @@ tl.from(".hero-text", {
     }
     // ">-0.5"
   )
-  .from(".hero-image-left", 
+  .from(
+    ".hero-image-left",
     {
       opacity: 0,
       duration: 1,
-    },
+    }
     // ">-0.5"
   )
   .from(
@@ -36,26 +37,8 @@ tl.from(".hero-text", {
     ">-0.5"
   );
 
-  
 // Wait for the DOM to be loaded
 document.addEventListener("DOMContentLoaded", function () {
-  // Fade in
-  const fadeinUpElements = document.querySelectorAll(".fadein-up");
-
-  fadeinUpElements.forEach((element) => {
-    gsap.from(element, {
-      scrollTrigger: {
-        trigger: element,
-        start: "top 80%",
-        // markers: true,
-        // toggleActions: "play none none none",
-      },
-      opacity: 0,
-      y: 100,
-      duration: 1.3,
-    });
-  });
-
   // Fade in letters
   // Select the text element and split the text into individual characters
   let textElement = document.querySelector(".typewriter");
@@ -93,4 +76,72 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     );
   }
+
+  // Fade-in Up
+  const fadeInUpElements = document.querySelectorAll(".fadein-up");
+
+  fadeInUpElements.forEach((element) => {
+    gsap.from(element, {
+      scrollTrigger: {
+        trigger: element,
+        start: "top 80%",
+        // markers: true,
+        // toggleActions: "play none none none",
+      },
+      opacity: 0,
+      y: 100,
+      duration: 1.3,
+    });
+  });
+
+  // Fade-in Right
+  const fadeInRightElements = document.querySelectorAll(".fadein-right");
+
+  fadeInRightElements.forEach((element) => {
+    gsap.from(element, {
+      scrollTrigger: {
+        trigger: element,
+        start: "top 80%",
+      },
+      opacity: 0,
+      x: -100,
+      duration: 1.3,
+    });
+  });
+
+  // Fade-in Left
+  const fadeInLeftElements = document.querySelectorAll(".fadein-left");
+
+  fadeInLeftElements.forEach((element) => {
+    gsap.from(element, {
+      scrollTrigger: {
+        trigger: element,
+        start: "top 80%",
+      },
+      opacity: 0,
+      x: 100,
+      duration: 1.3,
+    });
+  });
+
+  // Scale from 0
+  const scaleOut = document.querySelectorAll(".scale-out");
+
+  scaleOut.forEach((element) => {
+    gsap.from(element, {
+      scrollTrigger: {
+        trigger: element,
+        start: "top 80%",
+      },
+      scale: 0,
+      ease: "back",
+      // ease: "power2.inOut",
+      duration: 1.3,
+      opacity: 0,
+      delay: 0.3,
+    });
+  });
+
+
+
 });

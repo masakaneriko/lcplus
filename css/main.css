@@ -99,9 +99,11 @@ p {
   background-position: center bottom;
   filter: invert(1);
 }
-#footer .l-footer__foot .l-container {
-  display: flex;
-  align-items: center;
+@media (min-width: 600px) {
+  #footer .l-footer__foot .l-container {
+    display: flex;
+    align-items: center;
+  }
 }
 #footer .l-footer__foot .l-container .footer-column {
   flex: 1;
@@ -223,6 +225,9 @@ p {
 .page-id-8 .group-slider .swiper-slide p {
   text-align: center;
 }
+.page-id-8 #price {
+  padding-bottom: 4rem;
+}
 .page-id-8 .qanda {
   background: url(../images/qanda.png) no-repeat;
   background-size: cover;
@@ -233,4 +238,31 @@ p {
   background: white;
   border-radius: 0.75rem;
   margin-bottom: 2rem;
+}
+
+#contact::after, #contact::before {
+  content: "";
+  background: url(https://lc-plus.net/wp-content/themes/lcplus/images/rhombus.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: max(100px, 10vw);
+  height: 100%;
+  max-height: 754px;
+  display: block;
+  z-index: 1;
+  background-position: top left;
+}
+
+#contact::before {
+  left: 0;
+  top: 5%;
+}
+#contact::after {
+  right: 0;
+  bottom: 5%;
+  transform: scale(-1);
+}
+#contact .ark-block-section__color {
+  z-index: unset;
 }
