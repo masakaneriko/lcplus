@@ -6,8 +6,10 @@
 
   .l-footer__foot {
     .l-container {
-      display: flex;
-      align-items: center;
+      @include respond-to(tablet) {
+        display: flex;
+        align-items: center;
+      }
 
       .footer-column {
         flex: 1;

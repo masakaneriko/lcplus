@@ -11,6 +11,9 @@ function slider_price_shortcode()
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_chart.png" alt="">
         </div>
         <div class="swiper-slide">
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ghost.png" alt="">
+        </div>
+        <div class="swiper-slide">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_chart.png" alt="">
         </div>
         <div class="swiper-slide">
