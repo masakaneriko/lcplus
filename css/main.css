@@ -235,9 +235,16 @@ p {
   padding-bottom: 4rem;
 }
 .page-id-8 .qanda .arkp-scFaq01 {
-  background: white;
   border-radius: 0.75rem;
   margin-bottom: 2rem;
+}
+.page-id-8 .qanda .arkp-scFaq01 .ark-block-accordion__body {
+  background: #fbd6d5;
+  border-radius: var(--arkp--title--bdr-radius);
+}
+.page-id-8 .qanda .arkp-scFaq01 .ark-block-accordion__body::before {
+  color: #f7f7f7;
+  background: #313638;
 }
 
 #contact::after, #contact::before {
