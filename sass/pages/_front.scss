@@ -113,9 +113,17 @@
     padding-bottom: 4rem;
 
     .arkp-scFaq01 {
-      background: white;
       border-radius: 0.75rem;
       margin-bottom: 2rem;
+    }
+    .arkp-scFaq01 .ark-block-accordion__body {
+      background: get-color(accent, light);
+      border-radius: var(--arkp--title--bdr-radius);
+
+      &::before {
+        color: get-color(secondary);
+        background: get-color(raisin-black);
+      }
     }
   }
 }

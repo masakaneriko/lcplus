@@ -10,14 +10,14 @@ $slate-color: #727f83;
 $silver-color: #c8ced0;
 $light-gray-color: #f3f4f5;
 
-$lighten: 15;
+$lighten: 25;
 $darken: 25;
 
 // Color Map
 $colors: (
   primary: (
     base: $primary-color,
-    light: ligten($primary-color, $lighten),
+    light: lighten($primary-color, $lighten),
     dark: darken($primary-color, $darken),
   ),
   secondary: (
@@ -28,12 +28,12 @@ $colors: (
   accent:
     (
       base: $accent-color,
-      light: ligten($accent-color, $lighten),
+      light: lighten($accent-color, $lighten),
       dark: darken($accent-color, $darken),
     ),
   alabaster: (
     base: $alabaster-color,
-    light: ligten($alabaster-color, $lighten),
+    light: lighten($alabaster-color, $lighten),
     dark: darken($alabaster-color, $darken),
   ),
   raisin-black: (
@@ -44,7 +44,7 @@ $colors: (
   slate: (
     base: $slate-color,
     light: lighten($slate-color, $lighten),
-    dark: lighten($slate-color, $darken),
+    dark: darken($slate-color, $darken),
   ),
   silver: (
     base: $silver-color,

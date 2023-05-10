@@ -235,9 +235,16 @@ p {
   padding-bottom: 4rem;
 }
 .page-id-8 .qanda .arkp-scFaq01 {
-  background: white;
   border-radius: 0.75rem;
   margin-bottom: 2rem;
+}
+.page-id-8 .qanda .arkp-scFaq01 .ark-block-accordion__body {
+  background: #fbd6d5;
+  border-radius: var(--arkp--title--bdr-radius);
+}
+.page-id-8 .qanda .arkp-scFaq01 .ark-block-accordion__body::before {
+  color: #f7f7f7;
+  background: #313638;
 }
 
 #contact::after, #contact::before {
@@ -265,4 +272,72 @@ p {
 }
 #contact .ark-block-section__color {
   z-index: unset;
+}
+
+#service_hero {
+  position: relative;
+  z-index: 0;
+}
+#service_hero .bg_clip {
+  width: 100%;
+  height: 100%;
+  background: #9bc1bc;
+  clip-path: polygon(0 20%, 100% 37%, 100% 77%, 0 92%);
+  position: absolute;
+  z-index: -1;
+}
+#service_hero .bg_clip.flipped {
+  clip-path: polygon(0 37%, 100% 20%, 100% 92%, 0 77%);
+}
+#service_hero h1 {
+  color: #313638;
+  font-size: 8rem;
+  display: flex;
+  align-items: center;
+  text-indent: calc(10px + 6rem);
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+#service_hero h1::before {
+  content: "";
+  position: absolute;
+  background: url("../images/plus_mido.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 6rem;
+  height: 6rem;
+  animation: spin 500ms ease-in-out infinite reverse;
+}
+#service_hero .service_hero_content {
+  display: flex;
+  max-width: 1200px;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-inline: auto;
+}
+#service_hero .service_hero_content h2 {
+  margin-bottom: 1em;
+}
+#service_hero .service_hero_content .service_hero_image {
+  width: min(450px, 30vw);
+  animation: pop 1s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pop {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
 }
