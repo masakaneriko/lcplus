@@ -16,24 +16,29 @@
     position: absolute;
     z-index: -1;
   }
-  // create an acf to add a class
-  // if checked use the other 180 image
+  // acf true/false to flip background image horizontally
   .bg_clip.flipped {
     clip-path: polygon(0 37%, 100% 20%, 100% 92%, 0 77%);
   }
 
 
   h1 {
-    $size: 6rem;
+    $size_sm: 3rem;
+    $size_lg: 6rem;
+
     color: get-color(raisin-black);
-    font-size: 8rem;
+    font-size: 3rem;
     display: flex;
     align-items: center;
     // padding-left: 80px;
-    text-indent: calc(10px + $size);
+    text-indent: calc(10px + $size_sm);
     max-width: 1200px;
     margin-inline: auto;
     margin-bottom: 2rem;
+    @include respond-to(desktop) {
+      font-size: 8rem;
+      text-indent: calc(10px + $size_lg);
+    }
 
     &::before {
       content: '';
@@ -41,9 +46,13 @@
       background: url('../images/plus_mido.png');
       background-size: contain;
       background-repeat: no-repeat;
-      width: $size;
-      height: $size;
+      width: $size_sm;
+      height: $size_sm;
       animation: spin 500ms ease-in-out infinite reverse;
+      @include respond-to(desktop) {
+        width: $size_lg;
+        height: $size_lg;
+      }
     }
   }
 
