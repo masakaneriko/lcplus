@@ -35,11 +35,12 @@ Template Name: Service Template
     <?php endif; ?>
 
 
-    <!-- and lets add custom hero section here  -->
-    <!-- move this down inside main? and add .alignfull? -->
-    <div id="top_hero_area">
+    <?php // lets add custom hero section here
+          // move this down inside main? and add .alignfull?
+    ?>
+    <div id="service_hero">
       <p>this is my custom hero area</p>
-      <div style="background: magenta; height: 60vh;"></div>
+      <div></div>
     </div>
 
 

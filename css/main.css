@@ -266,3 +266,12 @@ p {
 #contact .ark-block-section__color {
   z-index: unset;
 }
+
+#service_hero {
+  background: url("../images/service_hero.png");
+  background-size: cover;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  height: 60vh;
+  color: yellowgreen;
+}

@@ -1,0 +1,14 @@
+#service_hero {
+  background: url('../images/service_hero.png');
+  background-size: cover;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  height: 60vh;
+  color: yellowgreen;
+}
+
+// create an acf to add a class
+// if checked use the other 180 image
+// #service_hero inverted {
+//   background: url('../images/service_hero_2.png');
+// }
