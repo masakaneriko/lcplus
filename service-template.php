@@ -41,7 +41,8 @@ Template Name: Service Template
     <div id="service_hero">
       <div class="bg_clip
         <?php
-          $is_checked = get_field('bg_flip');
+          // adds .flipped class if checked on acf
+          $is_checked = get_field('hero_bg_flip');
 
           if ($is_checked) {
             echo ' flipped';
