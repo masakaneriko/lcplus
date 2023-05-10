@@ -49,3 +49,12 @@ require_once(get_stylesheet_directory() . '/shortcodes/slider-price.php');
 require_once(get_stylesheet_directory() . '/shortcodes/tilt-bg.php');
 
 
+// add script to service-template pages
+function enqueue_service_script() {
+  if ( is_page_template( 'service-template.php' ) ) {
+    wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js', array(), '3.9.0', true);
+    wp_enqueue_script('gsap-scroll', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js', null, null, true);
+    wp_enqueue_script( 'service-script', get_stylesheet_directory_uri() . '/js/service.js', array( 'jquery' ), '1.0.0', true );
+  }
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_service_script' );

@@ -39,9 +39,34 @@ Template Name: Service Template
           // move this down inside main? and add .alignfull?
     ?>
     <div id="service_hero">
-      <p>this is my custom hero area</p>
-      <div></div>
+      <div class="bg_clip
+        <?php
+          $is_checked = get_field('bg_flip');
+
+          if ($is_checked) {
+            echo ' flipped';
+          }
+        ?>">
+      </div>
+      <div class="l-container">
+        <h1><?php echo the_title(); ?></h1>
+        <div class="service_hero_content">
+          <div class="service_hero_text">
+
+            <span><?php echo get_field('hero_span'); ?></span>
+            <h2><?php echo get_field('hero_h2'); ?></h2>
+            <p><?php echo get_field('hero_p'); ?></p>
+          </div>
+          <div class="service_hero_image">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/service_web_hero.png" alt="">
+          </div>
+        </div>
+      </div>
+              
+      <div class="scrotate" style="display: inline-block;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/plus_mido.png" alt="" width="50px" height="50px"></div>
+
     </div>
+
 
 
 		<div class="l-content__body l-container">
