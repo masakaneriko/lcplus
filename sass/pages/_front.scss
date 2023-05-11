@@ -163,3 +163,17 @@
   //   z-index: 5;
   // }
 }
+
+
+// highlight text
+// overrides the arkhe marker (.arkb-marker)
+.highlight > span {
+  background-image: linear-gradient(get-color(accent), get-color(accent));
+  background-size: 0 40%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 1.3s ease-in-out;
+}
+.highlight > span.active {
+  background-size: 100% 40%;
+}
