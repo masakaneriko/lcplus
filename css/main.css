@@ -336,6 +336,12 @@ p {
   width: min(450px, 30vw);
   animation: pop 1s ease-in-out infinite alternate-reverse;
 }
+#service_hero .scrotate {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  left: -50px;
+}
 
 @keyframes spin {
   from {
@@ -352,4 +358,12 @@ p {
   to {
     transform: scale(1.05);
   }
+}
+.scrotate2 {
+  position: relative;
+  right: -20vw;
+}
+.scrotate2 img {
+  width: 90px;
+  height: 90px;
 }

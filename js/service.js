@@ -43,16 +43,63 @@ tl.from(".service_hero_text > h2", {
 
   gsap.to(".scrotate", {
     scrollTrigger: {
-        trigger: ".scrotate",
-        scrub: 1,
-        start: 'top 80%',
+        // trigger: ".scrotate",
+        scrub: 3,
+        // start: 'top 80%',
         // markers: true,
-        // end: '+=5000',
+        end: '+=500',
     },
     rotation: 1440,
-    duration: 3,
+    duration: 1,
     x: width,
     ease: "none",
+  });
+  gsap.to(".scrotate2 > figure > img ", {
+    scrollTrigger: {
+        trigger: ".scrotate2 > figure > img",
+        scrub: 3,
+        start: 'top 90%',
+        // markers: true,
+        end: '+=500',
+    },
+    rotation: '-1440',
+    duration: 1,
+    x: '-120vw',
+    y: '15vh',
+    ease: "none",
+  });
+
+  // spinner
+  gsap.to('#spinner > img', {
+    scrollTrigger: {
+      trigger: '#spinner > img',
+      scrub: 1,
+      start: 'top bottom',
+      // markers: true,
+    },
+    rotation: 360,
+    duration: 1,
+
+    
+  });
+
+
+
+  // Fade-in
+  const fadeInElements = document.querySelectorAll(".fadein");
+
+  fadeInElements.forEach((element) => {
+    gsap.from(element, {
+      scrollTrigger: {
+        trigger: element,
+        start: "top 80%",
+        // markers: true,
+        // toggleActions: "play none none none",
+      },
+      opacity: 0,
+      duration: 1.6,
+      delay: 0.3,
+    });
   });
 
   // Fade-in Up
@@ -69,6 +116,24 @@ tl.from(".service_hero_text > h2", {
       opacity: 0,
       y: 100,
       duration: 1.3,
+    });
+  });
+
+  // Scale from 0
+  const scaleOut = document.querySelectorAll(".scale-out");
+
+  scaleOut.forEach((element) => {
+    gsap.from(element, {
+      scrollTrigger: {
+        trigger: element,
+        start: "top 80%",
+      },
+      scale: 0,
+      ease: "back",
+      // ease: "power2.inOut",
+      duration: 1.3,
+      opacity: 0,
+      // delay: 0.3,
     });
   });
 
