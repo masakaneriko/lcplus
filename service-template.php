@@ -64,7 +64,7 @@ Template Name: Service Template
         </div>
       </div>
               
-      <div class="scrotate" style="display: inline-block;"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/plus_mido.png" alt="" width="50px" height="50px"></div>
+      <div class="scrotate"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/plus_mido.png" alt=""></div>
 
     </div>
 

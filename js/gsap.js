@@ -145,3 +145,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+
+
+// highlight text on scroll
+// use arkhe maker (.arkb-marker)!!!
+gsap.utils.toArray('.highlight > span').forEach((span) => {
+  ScrollTrigger.create({
+    trigger: span,
+    start: "top 80%",
+    // toggleClass: "active",
+    onEnter: () => span.classList.add("active")
+  })
+});

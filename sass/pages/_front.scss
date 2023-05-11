@@ -41,15 +41,14 @@
   }
 
   .lc-rotate {
-    position: relative;
+    position: absolute;
     display: flex;
     width: 300px;
     justify-content: center;
     align-items: center;
-    top: -100px;
     z-index: 10;
-    margin-right: 0;
-    margin-left: auto;
+    right: 0;
+    bottom: 100px;
 
     .lc-rotate-text {
       position: absolute;
@@ -102,6 +101,7 @@
 
   // Price List Section
   #price {
+    overflow-x: hidden;
     padding-bottom: 4rem;
   }
 
@@ -162,4 +162,18 @@
   //   position: relative;
   //   z-index: 5;
   // }
+}
+
+
+// highlight text
+// overrides the arkhe marker (.arkb-marker)
+.highlight > span {
+  background-image: linear-gradient(get-color(accent), get-color(accent));
+  background-size: 0 40%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 1.3s ease-in-out;
+}
+.highlight > span.active {
+  background-size: 100% 40%;
 }
