@@ -225,6 +225,7 @@ p {
   text-align: center;
 }
 .page-id-8 #price {
+  overflow-x: hidden;
   padding-bottom: 4rem;
 }
 .page-id-8 .qanda {
