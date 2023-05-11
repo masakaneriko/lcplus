@@ -85,7 +85,7 @@
   .group-slider {
     h3 {
       text-align: center;
-      margin: 4rem 0 3rem;
+      margin: 8rem 0 3rem;
     }
 
     .swiper-wrapper {
@@ -108,7 +108,7 @@
   // Q&A Section
   .qanda {
     background: url(../images/qanda.png) no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     padding-top: 4rem;
     padding-bottom: 4rem;
 
@@ -117,7 +117,7 @@
       margin-bottom: 2rem;
     }
     .arkp-scFaq01 .ark-block-accordion__body {
-      background: get-color(accent, light);
+      background: lighten(get-color(accent), 27);
       border-radius: var(--arkp--title--bdr-radius);
 
       &::before {

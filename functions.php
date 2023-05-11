@@ -47,6 +47,7 @@ add_action('wp_enqueue_scripts', 'front_page_enqueue_script');
 require_once(get_stylesheet_directory() . '/shortcodes/slider-group.php');
 require_once(get_stylesheet_directory() . '/shortcodes/slider-price.php');
 require_once(get_stylesheet_directory() . '/shortcodes/tilt-bg.php');
+require_once(get_stylesheet_directory() . '/shortcodes/flow-chart.php');
 
 
 // add script to service-template pages
