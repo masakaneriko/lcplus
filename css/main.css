@@ -62,6 +62,78 @@ p {
   transform: translateY(-50%);
 }
 
+.flow-chart ul {
+  list-style-type: none;
+  padding: 0;
+}
+.flow-chart li {
+  text-align: center;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 700;
+  padding: 1.5em 0;
+  background: #9bc1bc;
+  border-radius: 5px;
+  margin: 0 2em 3em;
+  position: relative;
+  animation: rainbow 100ms linear infinite alternate-reverse;
+}
+.flow-chart li::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: solid 1em transparent;
+  border-top-color: #9bc1bc;
+  animation: rainbow-before 100ms linear infinite alternate-reverse;
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: #f00;
+  } /* red */
+  16.67% {
+    background-color: #ff0;
+  } /* orange */
+  33.33% {
+    background-color: #0f0;
+  } /* green */
+  50% {
+    background-color: #0ff;
+  } /* blue */
+  66.67% {
+    background-color: #00f;
+  } /* indigo */
+  83.33% {
+    background-color: #f0f;
+  } /* violet */
+  100% {
+    background-color: #f00;
+  } /* back to red */
+}
+@keyframes rainbow-before {
+  0% {
+    border-top-color: #f00;
+  } /* red */
+  16.67% {
+    border-top-color: #ff0;
+  } /* orange */
+  33.33% {
+    border-top-color: #0f0;
+  } /* green */
+  50% {
+    border-top-color: #0ff;
+  } /* blue */
+  66.67% {
+    border-top-color: #00f;
+  } /* indigo */
+  83.33% {
+    border-top-color: #f0f;
+  } /* violet */
+  100% {
+    border-top-color: #f00;
+  } /* back to red */
+}
 .tilt-bg {
   position: relative;
   height: 60px;
@@ -214,7 +286,7 @@ p {
 }
 .page-id-8 .group-slider h3 {
   text-align: center;
-  margin: 4rem 0 3rem;
+  margin: 8rem 0 3rem;
 }
 .page-id-8 .group-slider .swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
@@ -230,7 +302,7 @@ p {
 }
 .page-id-8 .qanda {
   background: url(../images/qanda.png) no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
@@ -239,7 +311,7 @@ p {
   margin-bottom: 2rem;
 }
 .page-id-8 .qanda .arkp-scFaq01 .ark-block-accordion__body {
-  background: #fbd6d5;
+  background: #fcdfde;
   border-radius: var(--arkp--title--bdr-radius);
 }
 .page-id-8 .qanda .arkp-scFaq01 .ark-block-accordion__body::before {

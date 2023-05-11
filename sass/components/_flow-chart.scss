@@ -1,0 +1,93 @@
+.flow-chart {
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    text-align: center;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-weight: 700;
+    padding: 1.5em 0;
+    background: get-color(primary);
+    border-radius: 5px;
+    margin: 0 2em 3em;
+    position: relative;
+    // animation: flicker 2s linear infinite alternate-reverse;
+    animation: rainbow 100ms linear infinite alternate-reverse;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      // z-index: 1;
+      border: solid 1em transparent;
+      border-top-color: get-color(primary);
+      // animation: flicker-before 2s linear infinite alternate-reverse;
+      animation: rainbow-before 100ms linear infinite alternate-reverse;
+    }
+  }
+}
+// @keyframes flicker {
+//   from {
+//     background-color: get-color(primary);
+//   }
+//   to {
+//     background-color: get-color(primary, light);
+//   }
+// }
+// @keyframes flicker-before {
+//   from {
+//     border-top-color: get-color(primary);
+//   }
+//   to {
+//     border-top-color: get-color(primary, light);
+//   }
+// }
+@keyframes rainbow {
+  0% {
+    background-color: #f00;
+  } /* red */
+  16.67% {
+    background-color: #ff0;
+  } /* orange */
+  33.33% {
+    background-color: #0f0;
+  } /* green */
+  50% {
+    background-color: #0ff;
+  } /* blue */
+  66.67% {
+    background-color: #00f;
+  } /* indigo */
+  83.33% {
+    background-color: #f0f;
+  } /* violet */
+  100% {
+    background-color: #f00;
+  } /* back to red */
+}
+@keyframes rainbow-before {
+  0% {
+    border-top-color: #f00;
+  } /* red */
+  16.67% {
+    border-top-color: #ff0;
+  } /* orange */
+  33.33% {
+    border-top-color: #0f0;
+  } /* green */
+  50% {
+    border-top-color: #0ff;
+  } /* blue */
+  66.67% {
+    border-top-color: #00f;
+  } /* indigo */
+  83.33% {
+    border-top-color: #f0f;
+  } /* violet */
+  100% {
+    border-top-color: #f00;
+  } /* back to red */
+}
