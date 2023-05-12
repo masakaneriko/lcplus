@@ -41,12 +41,12 @@
       .hero-image-center {
         animation: tvflash 100ms infinite ease-in;
       }
-      @keyframes tvflash  {
+      @keyframes tvflash {
         from {
-          filter: invert(0)
+          filter: invert(0);
         }
         to {
-          filter: invert(1)
+          filter: invert(1);
         }
       }
     }
@@ -108,6 +108,33 @@
 
     .swiper-slide p {
       text-align: center;
+    }
+  }
+
+  // PHILOSOPHY SECTION
+  #communication .ark-block-column {
+    position: relative;
+  }
+  .philcomm-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+
+    .philcomm-image-main {
+      height: 100%;
+      width: 50%;
+      margin-left: auto;
+      
+      //think we need to add the images with ::before and ::after here
+      
+      img {
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+      }
     }
   }
 
@@ -179,7 +206,6 @@
   //   z-index: 5;
   // }
 }
-
 
 // highlight text
 // overrides the arkhe marker (.arkb-marker)
