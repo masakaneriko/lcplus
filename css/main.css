@@ -330,7 +330,6 @@ p {
   max-height: 754px;
   display: block;
   z-index: 1;
-  background-position: top left;
 }
 
 #contact::before {
