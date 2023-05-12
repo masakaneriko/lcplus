@@ -37,6 +37,18 @@
         top: 5%;
         animation: ticktock 1s infinite 0.3s ease-in-out;
       }
+
+      .hero-image-center {
+        animation: tvflash 100ms infinite ease-in;
+      }
+      @keyframes tvflash  {
+        from {
+          filter: invert(0)
+        }
+        to {
+          filter: invert(1)
+        }
+      }
     }
   }
 
@@ -116,9 +128,14 @@
       border-radius: 0.75rem;
       margin-bottom: 2rem;
     }
+    .ark-block-accordion__item.is-opened {
+      .ark-block-accordion__title {
+        border-radius: (var(--arkp--title--bdr-radius) var(--arkp--title--bdr-radius) 0 0);
+      }
+    }
     .arkp-scFaq01 .ark-block-accordion__body {
       background: lighten(get-color(accent), 27);
-      border-radius: var(--arkp--title--bdr-radius);
+      border-radius: (0 0 var(--arkp--title--bdr-radius) var(--arkp--title--bdr-radius));
 
       &::before {
         color: get-color(secondary);

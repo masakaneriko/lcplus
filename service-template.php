@@ -64,7 +64,7 @@ Template Name: Service Template
         </div>
       </div>
               
-      <div class="scrotate"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/plus_mido.png" alt=""></div>
+      <div class="scrololol"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/plus_mido.png" alt=""></div>
 
     </div>
 

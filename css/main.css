@@ -134,6 +134,23 @@ p {
     border-top-color: #f00;
   } /* back to red */
 }
+.plus-divider {
+  margin: 2rem auto;
+  display: flex;
+  max-width: min(850px, 90%);
+  justify-content: space-around;
+}
+.plus-divider span {
+  content: "";
+  position: relative;
+  display: inline-block;
+  background: url("../images/plus_mido.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
 .tilt-bg {
   position: relative;
   height: 60px;
@@ -246,6 +263,17 @@ p {
   top: 5%;
   animation: ticktock 1s infinite 0.3s ease-in-out;
 }
+.page-id-8 #hero .hero-image .hero-image-center {
+  animation: tvflash 100ms infinite ease-in;
+}
+@keyframes tvflash {
+  from {
+    filter: invert(0);
+  }
+  to {
+    filter: invert(1);
+  }
+}
 .page-id-8 .lc-rotate {
   position: absolute;
   display: flex;
@@ -310,9 +338,12 @@ p {
   border-radius: 0.75rem;
   margin-bottom: 2rem;
 }
+.page-id-8 .qanda .ark-block-accordion__item.is-opened .ark-block-accordion__title {
+  border-radius: var(--arkp--title--bdr-radius) var(--arkp--title--bdr-radius) 0 0;
+}
 .page-id-8 .qanda .arkp-scFaq01 .ark-block-accordion__body {
   background: #fcdfde;
-  border-radius: var(--arkp--title--bdr-radius);
+  border-radius: 0 0 var(--arkp--title--bdr-radius) var(--arkp--title--bdr-radius);
 }
 .page-id-8 .qanda .arkp-scFaq01 .ark-block-accordion__body::before {
   color: #f7f7f7;
@@ -419,7 +450,7 @@ p {
   width: min(450px, 30vw);
   animation: pop 1s ease-in-out infinite alternate-reverse;
 }
-#service_hero .scrotate {
+#service_hero .scrololol {
   position: relative;
   width: 50px;
   height: 50px;
