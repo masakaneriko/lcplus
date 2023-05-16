@@ -48,6 +48,7 @@ require_once(get_stylesheet_directory() . '/shortcodes/slider-group.php');
 require_once(get_stylesheet_directory() . '/shortcodes/slider-price.php');
 require_once(get_stylesheet_directory() . '/shortcodes/tilt-bg.php');
 require_once(get_stylesheet_directory() . '/shortcodes/flow-chart.php');
+require_once(get_stylesheet_directory() . '/shortcodes/plus-divider.php');
 
 
 // add script to service-template pages

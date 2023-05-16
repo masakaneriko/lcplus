@@ -9,7 +9,7 @@ tl.from(".service_hero_text > h2", {
   duration: 1.3,
   scale: 0,
   ease: "back",
-  delay: 1.5,
+  delay: 1.2,
 })
   .from(
     ".service_hero_text > span",
@@ -34,17 +34,17 @@ tl.from(".service_hero_text > h2", {
       scale: 0,
       duration: 1,
     },
-    ">-0.5"
+    "<"
   );
 
 
   // rotate item on scroll
   const width = window.innerWidth;
 
-  gsap.to(".scrotate", {
+  gsap.to(".scrololol", {
     scrollTrigger: {
-        // trigger: ".scrotate",
-        scrub: 3,
+        // trigger: ".scrololol",
+        scrub: 1,
         // start: 'top 80%',
         // markers: true,
         end: '+=500',
@@ -83,6 +83,34 @@ tl.from(".service_hero_text > h2", {
     
   });
 
+  // NEW DIVIDER PART
+  const plusDivider = document.querySelectorAll('.plus-divider > span');
+  // plusDivider.forEach((span, index) => {
+  //   gsap.from(span, {
+  //     // rotation: '+=750',
+  //     delay: index * 0.3,
+  //     duration: 1,
+  //     ease: 'Sine.easeOut',
+  //     repeat: -1,
+  //     // scale: 0.5,
+  //     // yoyo: true,
+  //     opacity: 0,
+  //     y: -100
+  //   })
+  // })
+  gsap.from(plusDivider, {
+    scrollTrigger: {
+      trigger: '.plus-divider',
+      start: 'top 90%',
+      // markers: true,
+      toggleActions: 'play none none reset',
+    },
+    // rotation: '+=1200',
+    y: -100,
+    stagger: 0.1,
+    opacity: 0,
+    ease: 'Sine.easeOut',
+  });
 
 
   // Fade-in
@@ -109,7 +137,7 @@ tl.from(".service_hero_text > h2", {
     gsap.from(element, {
       scrollTrigger: {
         trigger: element,
-        start: "top 80%",
+        start: "top 90%",
         // markers: true,
         // toggleActions: "play none none none",
       },

@@ -1,0 +1,17 @@
+.plus-divider {
+  margin: 2rem auto;
+  display: flex;
+  max-width: min(850px, 90%);
+  justify-content: space-around;
+
+  span {
+    content: '';
+    position: relative;
+    display: inline-block;
+    background: url('../images/plus_mido.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+  }
+}

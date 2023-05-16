@@ -1,6 +1,6 @@
 <?php
 
-function flow_chart_shortcode($atts)
+function flow_chart_shortcode()
 {
 
   ob_start(); ?>

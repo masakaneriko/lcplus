@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         opacity: 1,
         duration: 1.3,
-        delay: i * 0.1,
+        delay: i * 0.06,
         scrollTrigger: {
           trigger: charElement,
           start: "top 80%", // start fade-in animation when 80% of the element is visible in the viewport
