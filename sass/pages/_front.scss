@@ -143,33 +143,6 @@
     overflow-x: hidden;
     padding-bottom: 4rem;
   }
-
-  // Q&A Section
-  .qanda {
-    background: url(../images/qanda.png) no-repeat;
-    background-size: 100% 100%;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-
-    .arkp-scFaq01 {
-      border-radius: 0.75rem;
-      margin-bottom: 2rem;
-    }
-    .ark-block-accordion__item.is-opened {
-      .ark-block-accordion__title {
-        border-radius: (var(--arkp--title--bdr-radius) var(--arkp--title--bdr-radius) 0 0);
-      }
-    }
-    .arkp-scFaq01 .ark-block-accordion__body {
-      background: lighten(get-color(accent), 27);
-      border-radius: (0 0 var(--arkp--title--bdr-radius) var(--arkp--title--bdr-radius));
-
-      &::before {
-        color: get-color(secondary);
-        background: get-color(raisin-black);
-      }
-    }
-  }
 }
 
 // Contact Section
