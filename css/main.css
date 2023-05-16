@@ -7,6 +7,10 @@ a {
   cursor: pointer;
 }
 
+.c-gnav .__mainText {
+  font-weight: 700;
+}
+
 .wpforms-submit-container {
   display: flex;
   justify-content: center;
@@ -62,30 +66,21 @@ p {
   transform: translateY(-50%);
 }
 
-.flow-chart ul {
-  list-style-type: none;
-  padding: 0;
+.plus-divider {
+  margin: 2rem auto;
+  display: flex;
+  max-width: min(850px, 90%);
+  justify-content: space-around;
 }
-.flow-chart li {
-  text-align: center;
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
-  font-weight: 700;
-  padding: 1.5em 0;
-  background: #9bc1bc;
-  border-radius: 5px;
-  margin: 0 2em 3em;
-  position: relative;
-  animation: rainbow 100ms linear infinite alternate-reverse;
-}
-.flow-chart li::before {
+.plus-divider span {
   content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: solid 1em transparent;
-  border-top-color: #9bc1bc;
-  animation: rainbow-before 100ms linear infinite alternate-reverse;
+  position: relative;
+  display: inline-block;
+  background: url("../images/plus_mido.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
 }
 
 @keyframes rainbow {
@@ -111,7 +106,7 @@ p {
     background-color: #f00;
   } /* back to red */
 }
-@keyframes rainbow-before {
+@keyframes rainbow-border {
   0% {
     border-top-color: #f00;
   } /* red */
@@ -134,23 +129,6 @@ p {
     border-top-color: #f00;
   } /* back to red */
 }
-.plus-divider {
-  margin: 2rem auto;
-  display: flex;
-  max-width: min(850px, 90%);
-  justify-content: space-around;
-}
-.plus-divider span {
-  content: "";
-  position: relative;
-  display: inline-block;
-  background: url("../images/plus_mido.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
-}
-
 .tilt-bg {
   position: relative;
   height: 60px;
@@ -180,6 +158,56 @@ p {
 
 .custom-shape-divider-top-1682382870 .shape-fill {
   fill: #9bc1bc;
+}
+
+#contact::after, #contact::before {
+  content: "";
+  background: url(https://lc-plus.net/wp-content/themes/lcplus/images/rhombus.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: max(100px, 10vw);
+  height: 100%;
+  max-height: 754px;
+  display: block;
+  z-index: 1;
+}
+
+#contact::before {
+  left: 0;
+  top: 5%;
+}
+#contact::after {
+  right: 0;
+  bottom: 5%;
+  transform: scale(-1);
+}
+#contact .ark-block-section__color {
+  z-index: unset;
+}
+
+.flow-chart ul {
+  list-style-type: none;
+  padding: 0;
+}
+.flow-chart li {
+  text-align: center;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 700;
+  padding: 1.5em 0;
+  background: #9bc1bc;
+  border-radius: 5px;
+  margin: 0 2em 3em;
+  position: relative;
+}
+.flow-chart li::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: solid 1em transparent;
+  border-top-color: #9bc1bc;
 }
 
 #footer {
@@ -224,6 +252,28 @@ p {
   column-gap: 2rem;
   color: black;
   font-weight: 700;
+}
+
+.qanda {
+  background: url(../images/qanda.png) no-repeat;
+  background-size: 100% 100%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.qanda .arkp-scFaq01 {
+  border-radius: 0.75rem;
+  margin-bottom: 2rem;
+}
+.qanda .ark-block-accordion__item.is-opened .ark-block-accordion__title {
+  border-radius: var(--arkp--title--bdr-radius) var(--arkp--title--bdr-radius) 0 0;
+}
+.qanda .arkp-scFaq01 .ark-block-accordion__body {
+  background: #fcdfde;
+  border-radius: 0 0 var(--arkp--title--bdr-radius) var(--arkp--title--bdr-radius);
+}
+.qanda .arkp-scFaq01 .ark-block-accordion__body::before {
+  color: #f7f7f7;
+  background: #313638;
 }
 
 .page-id-8 #hero {
@@ -349,53 +399,6 @@ p {
   overflow-x: hidden;
   padding-bottom: 4rem;
 }
-.page-id-8 .qanda {
-  background: url(../images/qanda.png) no-repeat;
-  background-size: 100% 100%;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-.page-id-8 .qanda .arkp-scFaq01 {
-  border-radius: 0.75rem;
-  margin-bottom: 2rem;
-}
-.page-id-8 .qanda .ark-block-accordion__item.is-opened .ark-block-accordion__title {
-  border-radius: var(--arkp--title--bdr-radius) var(--arkp--title--bdr-radius) 0 0;
-}
-.page-id-8 .qanda .arkp-scFaq01 .ark-block-accordion__body {
-  background: #fcdfde;
-  border-radius: 0 0 var(--arkp--title--bdr-radius) var(--arkp--title--bdr-radius);
-}
-.page-id-8 .qanda .arkp-scFaq01 .ark-block-accordion__body::before {
-  color: #f7f7f7;
-  background: #313638;
-}
-
-#contact::after, #contact::before {
-  content: "";
-  background: url(https://lc-plus.net/wp-content/themes/lcplus/images/rhombus.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  width: max(100px, 10vw);
-  height: 100%;
-  max-height: 754px;
-  display: block;
-  z-index: 1;
-}
-
-#contact::before {
-  left: 0;
-  top: 5%;
-}
-#contact::after {
-  right: 0;
-  bottom: 5%;
-  transform: scale(-1);
-}
-#contact .ark-block-section__color {
-  z-index: unset;
-}
 
 .highlight > span {
   background-image: linear-gradient(#ef6461, #ef6461);
@@ -471,11 +474,9 @@ p {
   width: min(450px, 30vw);
   animation: pop 1s ease-in-out infinite alternate-reverse;
 }
-#service_hero .scrololol {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  left: -50px;
+
+#service_price .comment {
+  border: 1px solid #313638;
 }
 
 @keyframes spin {
@@ -494,6 +495,13 @@ p {
     transform: scale(1.05);
   }
 }
+.scrololol {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  left: -50px;
+}
+
 .scrotate2 {
   position: relative;
   right: -20vw;
