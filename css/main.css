@@ -75,7 +75,6 @@ p {
   border-radius: 5px;
   margin: 0 2em 3em;
   position: relative;
-  animation: rainbow 100ms linear infinite alternate-reverse;
 }
 .flow-chart li::before {
   content: "";
@@ -85,7 +84,23 @@ p {
   transform: translateX(-50%);
   border: solid 1em transparent;
   border-top-color: #9bc1bc;
-  animation: rainbow-before 100ms linear infinite alternate-reverse;
+}
+
+.plus-divider {
+  margin: 2rem auto;
+  display: flex;
+  max-width: min(850px, 90%);
+  justify-content: space-around;
+}
+.plus-divider span {
+  content: "";
+  position: relative;
+  display: inline-block;
+  background: url("../images/plus_mido.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
 }
 
 @keyframes rainbow {
@@ -111,7 +126,7 @@ p {
     background-color: #f00;
   } /* back to red */
 }
-@keyframes rainbow-before {
+@keyframes rainbow-border {
   0% {
     border-top-color: #f00;
   } /* red */
@@ -134,23 +149,6 @@ p {
     border-top-color: #f00;
   } /* back to red */
 }
-.plus-divider {
-  margin: 2rem auto;
-  display: flex;
-  max-width: min(850px, 90%);
-  justify-content: space-around;
-}
-.plus-divider span {
-  content: "";
-  position: relative;
-  display: inline-block;
-  background: url("../images/plus_mido.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
-}
-
 .tilt-bg {
   position: relative;
   height: 60px;
@@ -471,11 +469,9 @@ p {
   width: min(450px, 30vw);
   animation: pop 1s ease-in-out infinite alternate-reverse;
 }
-#service_hero .scrololol {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  left: -50px;
+
+#service_price .comment {
+  border: 1px solid #313638;
 }
 
 @keyframes spin {
@@ -494,6 +490,13 @@ p {
     transform: scale(1.05);
   }
 }
+.scrololol {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  left: -50px;
+}
+
 .scrotate2 {
   position: relative;
   right: -20vw;

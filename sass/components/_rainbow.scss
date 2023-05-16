@@ -1,0 +1,46 @@
+@keyframes rainbow {
+  0% {
+    background-color: #f00;
+  } /* red */
+  16.67% {
+    background-color: #ff0;
+  } /* orange */
+  33.33% {
+    background-color: #0f0;
+  } /* green */
+  50% {
+    background-color: #0ff;
+  } /* blue */
+  66.67% {
+    background-color: #00f;
+  } /* indigo */
+  83.33% {
+    background-color: #f0f;
+  } /* violet */
+  100% {
+    background-color: #f00;
+  } /* back to red */
+}
+@keyframes rainbow-border {
+  0% {
+    border-top-color: #f00;
+  } /* red */
+  16.67% {
+    border-top-color: #ff0;
+  } /* orange */
+  33.33% {
+    border-top-color: #0f0;
+  } /* green */
+  50% {
+    border-top-color: #0ff;
+  } /* blue */
+  66.67% {
+    border-top-color: #00f;
+  } /* indigo */
+  83.33% {
+    border-top-color: #f0f;
+  } /* violet */
+  100% {
+    border-top-color: #f00;
+  } /* back to red */
+}
