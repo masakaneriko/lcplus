@@ -37,18 +37,17 @@
         top: 5%;
         animation: ticktock 1s infinite 0.3s ease-in-out;
       }
-
-      .hero-image-center {
-        animation: tvflash 100ms infinite ease-in;
-      }
-      @keyframes tvflash {
-        from {
-          filter: invert(0);
-        }
-        to {
-          filter: invert(1);
-        }
-      }
+      // .hero-image-center {
+      //   animation: tvflash 100ms infinite ease-in;
+      // }
+      // @keyframes tvflash {
+      //   from {
+      //     filter: invert(0);
+      //   }
+      //   to {
+      //     filter: invert(1);
+      //   }
+      // }
     }
   }
 
@@ -70,7 +69,7 @@
     .lc-rotate-plus {
       position: absolute;
       max-width: 60%;
-      animation: spin 1s linear infinite;
+      // animation: spin 1s linear infinite;
     }
     @keyframes spin {
       from {
