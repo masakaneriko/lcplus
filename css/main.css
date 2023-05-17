@@ -415,33 +415,28 @@ p {
 #service_hero .l-container {
   margin-bottom: 2rem;
 }
-#service_hero h1 {
-  color: #313638;
-  font-size: 3rem;
+#service_hero .service_title {
+  position: relative;
   display: flex;
   align-items: center;
-  text-indent: calc(10px + 3rem);
-  max-width: 1200px;
-  margin-inline: auto;
+  gap: 1rem;
   margin-bottom: 2rem;
 }
+#service_hero .service_title h1 {
+  color: #313638;
+  font-size: 3rem;
+}
 @media (min-width: 1000px) {
-  #service_hero h1 {
+  #service_hero .service_title h1 {
     font-size: 8rem;
-    text-indent: calc(10px + 6rem);
   }
 }
-#service_hero h1::before {
-  content: "";
-  position: absolute;
-  background: url("../images/plus_mido.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+#service_hero .service_title .service_title_plus {
   width: 3rem;
   height: 3rem;
 }
 @media (min-width: 1000px) {
-  #service_hero h1::before {
+  #service_hero .service_title .service_title_plus {
     width: 6rem;
     height: 6rem;
   }

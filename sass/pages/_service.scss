@@ -26,30 +26,36 @@
     margin-bottom: 2rem;
   }
 
-  h1 {
+  .service_title {
     $size_sm: 3rem;
     $size_lg: 6rem;
-
-    color: get-color(raisin-black);
-    font-size: 3rem;
+    position: relative;
     display: flex;
     align-items: center;
-    // padding-left: 80px;
-    text-indent: calc(10px + $size_sm);
-    max-width: 1200px;
-    margin-inline: auto;
+    gap: 1rem;
     margin-bottom: 2rem;
-    @include respond-to(desktop) {
-      font-size: 8rem;
-      text-indent: calc(10px + $size_lg);
+  
+    h1 {
+      color: get-color(raisin-black);
+      font-size: 3rem;
+      // display: flex;
+      // align-items: center;
+      // padding-left: 80px;
+      // text-indent: calc(10px + $size_sm);
+      // max-width: 1200px;
+      // margin-inline: auto;
+      // margin-bottom: 2rem;
+      @include respond-to(desktop) {
+        font-size: 8rem;
+        // text-indent: calc(10px + $size_lg);
+      }
     }
-
-    &::before {
-      content: "";
-      position: absolute;
-      background: url("../images/plus_mido.png");
-      background-size: contain;
-      background-repeat: no-repeat;
+    .service_title_plus {
+      // content: "";
+      // position: absolute;
+      // background: url("../images/plus_mido.png");
+      // background-size: contain;
+      // background-repeat: no-repeat;
       width: $size_sm;
       height: $size_sm;
       // animation: spin 500ms ease-in-out infinite reverse;

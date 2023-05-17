@@ -1,48 +1,82 @@
-// Wait for the DOM to be loaded
-document.addEventListener("DOMContentLoaded", function () {
-
 // new timeline
-const tl = gsap.timeline();
-// GSAP animation code
-tl.from(".service_hero_text > h2", {
+const tl2 = gsap.timeline();
+// roll the plus image in from the left
+tl2.from(".service_title_plus", {
+  x: -500,
+  rotation: -360,
+  duration: 2,
+  delay: 1,
+  ease: 'easeIn'
+})
+
+// Fade in letters
+// Select the text element and split the text into individual characters
+let textElement = document.querySelector(".service_title h1");
+let textContent = textElement.textContent.trim();
+
+// Wrap each character in a span element
+let charArray = textContent.split('');
+let newContent = charArray.map(char => `<span>${char}</span>`).join('');
+textElement.innerHTML = newContent;
+
+// Select all the span elements and animate their opacity
+let charElements = document.querySelectorAll('.service_title h1 span');
+tl2.from(charElements, {
   opacity: 0,
-  duration: 1.3,
+  duration: 1,
+  stagger: 0.06
+},
+">0.3"
+);
+
+tl2.from(".service_hero_content", {
+  opacity: 0,
   scale: 0,
   ease: "back",
-  delay: 1.2,
-})
-  .from(
-    ".service_hero_text > span",
-    {
-      opacity: 0,
-      duration: 1,
-    },
-    ">-0.5"
-  )
-  .from(
-    ".service_hero_text > p",
-    {
-      opacity: 0,
-      duration: 1,
-    },
-    ">-0.5"
-  )
-  .from(
-    ".service_hero_image > img",
-    {
-      // opacity: 0,
-      scale: 0,
-      duration: 1,
-    },
-    "<"
-  );
+  duration: 1.3,
+},
+">-0.5"
+);
+// // new timeline
+// const tl = gsap.timeline();
+// // GSAP animation code
+// tl.from(".service_hero_text > h2", {
+//   opacity: 0,
+//   duration: 1.3,
+//   scale: 0,
+//   ease: "back",
+//   delay: 1.2,
+// })
+//   .from(
+//     ".service_hero_text > span",
+//     {
+//       opacity: 0,
+//       duration: 1,
+//     },
+//     ">-0.5"
+//   )
+//   .from(
+//     ".service_hero_text > p",
+//     {
+//       opacity: 0,
+//       duration: 1,
+//     },
+//     ">-0.5"
+//   )
+//   .from(
+//     ".service_hero_image > img",
+//     {
+//       // opacity: 0,
+//       scale: 0,
+//       duration: 1,
+//     },
+//     "<"
+//   );
 
-  gsap.from("#service_hero h1::before", {
-    x: 100,
-    rotation: 360,
-    duration: 1,
-  })
 
+
+// Wait for the DOM to be loaded
+document.addEventListener("DOMContentLoaded", function () {
 
   // for flow-chart shortcode
   gsap.from(".flow-chart li", {
@@ -56,7 +90,6 @@ tl.from(".service_hero_text > h2", {
     stagger: 0.5,
     duration: 1.3,
 });
-
 
 
   // rotate item on scroll

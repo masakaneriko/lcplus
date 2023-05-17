@@ -50,7 +50,12 @@ Template Name: Service Template
         ?>">
       </div>
       <div class="l-container">
-        <h1><?php echo the_title(); ?></h1>
+        <div class="service_title">
+          <div class="service_title_plus">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/plus_mido.png">
+          </div>
+          <h1><?php echo the_title(); ?></h1>
+        </div>
         <div class="service_hero_content">
           <div class="service_hero_text">
 
