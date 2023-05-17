@@ -14,7 +14,7 @@
     position: relative;
     // animation: rainbow 100ms linear infinite alternate-reverse;
 
-    &::before {
+    &:not(:last-child)::before {
       content: "";
       position: absolute;
       top: 100%;

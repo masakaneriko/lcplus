@@ -37,6 +37,27 @@ tl.from(".service_hero_text > h2", {
     "<"
   );
 
+  gsap.from("#service_hero h1::before", {
+    x: 100,
+    rotation: 360,
+    duration: 1,
+  })
+
+
+  // for flow-chart shortcode
+  gsap.from(".flow-chart li", {
+    scrollTrigger: {
+        trigger: ".flow-chart",
+        start: "top 80%",
+        // markers: true,
+    },
+    y: 250,
+    autoAlpha: 0,
+    stagger: 0.5,
+    duration: 1.3,
+});
+
+
 
   // rotate item on scroll
   const width = window.innerWidth;

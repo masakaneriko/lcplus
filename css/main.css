@@ -200,7 +200,7 @@ p {
   margin: 0 2em 3em;
   position: relative;
 }
-.flow-chart li::before {
+.flow-chart li:not(:last-child)::before {
   content: "";
   position: absolute;
   top: 100%;
@@ -411,6 +411,9 @@ p {
 }
 #service_hero .bg_clip.flipped {
   clip-path: polygon(0 37%, 100% 20%, 100% 92%, 0 77%);
+}
+#service_hero .l-container {
+  margin-bottom: 2rem;
 }
 #service_hero h1 {
   color: #313638;
