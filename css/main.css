@@ -214,7 +214,6 @@ p {
   background: url(../images/company_04.jpg);
   background-size: cover;
   background-position: center bottom;
-  filter: invert(1);
 }
 @media (min-width: 600px) {
   #footer .l-footer__foot .l-container {
@@ -313,17 +312,6 @@ p {
   top: 5%;
   animation: ticktock 1s infinite 0.3s ease-in-out;
 }
-.page-id-8 #hero .hero-image .hero-image-center {
-  animation: tvflash 100ms infinite ease-in;
-}
-@keyframes tvflash {
-  from {
-    filter: invert(0);
-  }
-  to {
-    filter: invert(1);
-  }
-}
 .page-id-8 .lc-rotate {
   position: absolute;
   display: flex;
@@ -341,7 +329,6 @@ p {
 .page-id-8 .lc-rotate .lc-rotate-plus {
   position: absolute;
   max-width: 60%;
-  animation: spin 1s linear infinite;
 }
 @keyframes spin {
   from {

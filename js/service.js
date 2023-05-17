@@ -120,7 +120,7 @@ tl.from(".service_hero_text > h2", {
     gsap.from(element, {
       scrollTrigger: {
         trigger: element,
-        start: "top 80%",
+        start: "top 90%",
         // markers: true,
         // toggleActions: "play none none none",
       },
@@ -154,7 +154,7 @@ tl.from(".service_hero_text > h2", {
     gsap.from(element, {
       scrollTrigger: {
         trigger: element,
-        start: "top 80%",
+        start: "top 90%",
       },
       scale: 0,
       ease: "back",
