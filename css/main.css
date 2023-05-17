@@ -436,7 +436,6 @@ p {
   background-repeat: no-repeat;
   width: 3rem;
   height: 3rem;
-  animation: spin 500ms ease-in-out infinite reverse;
 }
 @media (min-width: 1000px) {
   #service_hero h1::before {

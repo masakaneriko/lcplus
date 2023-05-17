@@ -48,7 +48,7 @@
       background-repeat: no-repeat;
       width: $size_sm;
       height: $size_sm;
-      animation: spin 500ms ease-in-out infinite reverse;
+      // animation: spin 500ms ease-in-out infinite reverse;
       @include respond-to(desktop) {
         width: $size_lg;
         height: $size_lg;
