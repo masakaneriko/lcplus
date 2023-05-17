@@ -25,7 +25,7 @@ $is_active_footer2 = is_active_sidebar( 'footer-2' );
 		<?php endif; ?>
 		<div class="l-footer__foot">
 			<div class="l-container">
-				<?php
+				<!-- <?php
 					do_action( 'arkhe_start_footer_foot_content' );
 					wp_nav_menu(
 						array(
@@ -37,7 +37,7 @@ $is_active_footer2 = is_active_sidebar( 'footer-2' );
 							'link_after'      => '',
 						)
 					);
-				?>
+				?> -->
 				<?php do_action( 'arkhe_before_copyright' ); ?>
 				<p class="c-copyright">
 					<?php echo wp_kses( Arkhe::get_setting( 'copyright' ), Arkhe::$allowed_text_html ); ?>
