@@ -4,7 +4,7 @@ function slider_group_shortcode() {
   ob_start(); ?>
 
   <div class="group-slider">
-    <h3 class="fadein-up">グループ会社で行っている事業の例</h3>
+    <h3 class="fadein-up">グループ会社でおこなっている事業例</h3>
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
@@ -13,7 +13,7 @@ function slider_group_shortcode() {
         </div>
         <div class="swiper-slide">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider-energy.png" alt="">
-          <p>今日聞く</p>
+          <p>教育く</p>
         </div>
         <div class="swiper-slide">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slider-energy.png" alt="">
