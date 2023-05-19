@@ -8,16 +8,24 @@ function slider_price_shortcode()
     <div class="swiper-price">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_chart.png" alt="">
+          <a href="">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_chart.png" alt="">
+          </a>
         </div>
         <div class="swiper-slide">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ghost.png" alt="">
+          <a href="">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ghost.png" alt="">
+          </a>
         </div>
         <div class="swiper-slide">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_chart.png" alt="">
+          <a href="">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_chart.png" alt="">
+          </a>
         </div>
         <div class="swiper-slide">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_chart.png" alt="">
+          <a href="">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_chart.png" alt="">
+          </a>
         </div>
       </div>
     </div>
