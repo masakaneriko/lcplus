@@ -157,3 +157,20 @@ gsap.utils.toArray('.highlight > span').forEach((span) => {
     onEnter: () => span.classList.add("active")
   })
 });
+
+
+// NEW DIVIDER PART
+const plusDivider = document.querySelectorAll('.plus-divider > span');
+gsap.from(plusDivider, {
+  scrollTrigger: {
+    trigger: '.plus-divider',
+    start: 'top 90%',
+    // markers: true,
+    toggleActions: 'play none none reset',
+  },
+  // rotation: '+=1200',
+  y: -100,
+  stagger: 0.1,
+  opacity: 0,
+  ease: 'Sine.easeOut',
+});
