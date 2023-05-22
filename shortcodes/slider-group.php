@@ -3,8 +3,8 @@
 function slider_group_shortcode() {
   ob_start(); ?>
 
-  <div class="group-slider">
-    <h3 class="fadein-up">グループ会社でおこなっている事業例</h3>
+  <div class="group-slider fadein">
+    <h3>グループ会社でおこなっている事業例</h3>
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">

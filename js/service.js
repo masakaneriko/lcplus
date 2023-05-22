@@ -4,39 +4,39 @@ const tl2 = gsap.timeline();
 tl2.from(".service_title_plus", {
   x: -500,
   rotation: -360,
-  duration: 2,
-  delay: 1,
+  duration: 1.7,
+  // delay: 1,se
   ease: 'easeIn'
 })
 
-// Fade in letters
-// Select the text element and split the text into individual characters
-let textElement = document.querySelector(".service_title h1");
-let textContent = textElement.textContent.trim();
+  // Fade in letters
+  // Select the text element and split the text into individual characters
+  let textElement = document.querySelector(".service_title h1");
+  let textContent = textElement.textContent.trim();
 
-// Wrap each character in a span element
-let charArray = textContent.split('');
-let newContent = charArray.map(char => `<span>${char}</span>`).join('');
-textElement.innerHTML = newContent;
+  // Wrap each character in a span element
+  let charArray = textContent.split('');
+  let newContent = charArray.map(char => `<span>${char}</span>`).join('');
+  textElement.innerHTML = newContent;
 
-// Select all the span elements and animate their opacity
-let charElements = document.querySelectorAll('.service_title h1 span');
-tl2.from(charElements, {
-  opacity: 0,
-  duration: 1,
-  stagger: 0.06
-},
-">0.3"
-);
+  // Select all the span elements and animate their opacity
+  let charElements = document.querySelectorAll('.service_title h1 span');
+  tl2.from(charElements, {
+    opacity: 0,
+    duration: 1,
+    stagger: 0.06
+  },
+  // ">0.3"
+  );
 
-tl2.from(".service_hero_content", {
-  opacity: 0,
-  scale: 0,
-  ease: "back",
-  duration: 1.3,
-},
-">-0.5"
-);
+  tl2.from(".service_hero_content", {
+    opacity: 0,
+    scale: 0,
+    ease: "back",
+    duration: 1.3,
+  },
+  ">-0.5"
+  );
 // // new timeline
 // const tl = gsap.timeline();
 // // GSAP animation code
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // rotate item on scroll
-  const width = window.innerWidth;
+  const width = (window.innerWidth) * (2/3);
 
   gsap.to(".scrololol", {
     scrollTrigger: {
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // toggleActions: "play none none none",
       },
       opacity: 0,
-      duration: 1.6,
+      duration: 1.7,
       delay: 0.3,
     });
   });

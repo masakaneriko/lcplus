@@ -29,24 +29,11 @@ h3 {
   font-weight: 700;
 }
 
-h4 {
+h4, .h4 {
   font-size: clamp(1rem, 1.5vw, 1.2rem);
 }
 p {
   font-weight: 700;
+  line-height: 2;
 }
 
-.title-border-left {
-  position: relative;
-  left: 0.7em;
-  &::before {
-    content: "";
-    width: 0.2em;
-    background: get-color(raisin-black);
-    height: 90%;
-    position: absolute;
-    left: -0.7em;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}

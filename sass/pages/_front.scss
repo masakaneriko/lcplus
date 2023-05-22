@@ -126,13 +126,35 @@
       height: 100%;
       width: 50%;
       margin-left: auto;
-      
+
       //think we need to add the images with ::before and ::after here
-      
+
       img {
         height: 100%;
         width: auto;
         object-fit: contain;
+      }
+    }
+  }
+
+  // Service Section
+  #service {
+    figure.arkp-scProductOV02__imgWrapper {
+      box-shadow: 0 0 5px get-color(slate);
+    }
+
+    .title-border-left {
+      position: relative;
+      text-indent: 0.7em;
+      &::before {
+        content: "";
+        width: 0.2em;
+        background: get-color(raisin-black);
+        height: 90%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
   }
@@ -143,8 +165,6 @@
     padding-bottom: 4rem;
   }
 }
-
-
 
 // highlight text
 // overrides the arkhe marker (.arkb-marker)

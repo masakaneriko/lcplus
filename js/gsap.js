@@ -76,6 +76,22 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     );
   }
+  // Fade-in
+  const fadeInElements = document.querySelectorAll(".fadein");
+
+  fadeInElements.forEach((element) => {
+    gsap.from(element, {
+      scrollTrigger: {
+        trigger: element,
+        start: "top 90%",
+        // markers: true,
+        // toggleActions: "play none none none",
+      },
+      opacity: 0,
+      duration: 1.7,
+      delay: 0.3,
+    });
+  });
 
   // Fade-in Up
   const fadeInUpElements = document.querySelectorAll(".fadein-up");
