@@ -1,22 +1,30 @@
-<?php
+<?php 
 
-function flow_chart_shortcode()
+// use the shortcode like this
+// [flow_chart items="Item 1, Item 2, Item 3"]
+
+
+function flow_chart_shortcode($atts)
 {
+  $atts = shortcode_atts(
+    array(
+      'items' => '',
+    ),
+    $atts
+  );
 
+  $items = explode(',', $atts['items']);
   ob_start(); ?>
 
   <div class="flow-chart">
     <ul>
-      <li>➀お問い合わせ</li>
-      <li>➁おみつもり</li>
-      <li>➂スケジュール</li>
-      <li>➃ご案内</li>
-      <li>➄制作</li>
-      <li>➅納品</li>
+      <?php foreach ($items as $item) : ?>
+        <li><?php echo esc_html($item); ?></li>
+      <?php endforeach; ?>
     </ul>
   </div>
 
-<?php
+  <?php
   return ob_get_clean();
 }
 add_shortcode('flow_chart', 'flow_chart_shortcode');
