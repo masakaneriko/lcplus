@@ -78,10 +78,12 @@ tl2.from(".service_title_plus", {
 // Wait for the DOM to be loaded
 document.addEventListener("DOMContentLoaded", function () {
 
-  // for flow-chart shortcode
-  gsap.from(".flow-chart li", {
+  // for flow section
+  const flowItem = document.querySelectorAll("#flow .ark-block-step__item")
+  
+  gsap.from( flowItem, {
     scrollTrigger: {
-        trigger: ".flow-chart",
+        trigger: flowItem,
         start: "top 80%",
         // markers: true,
     },

@@ -259,7 +259,6 @@ p {
 }
 .qanda .arkp-scFaq01 .ark-block-accordion__body::before {
   color: #f7f7f7;
-  background: #313638;
 }
 
 .page-id-8 #hero {
@@ -466,6 +465,39 @@ p {
 
 #service_price .comment {
   border: 1px solid #313638;
+}
+
+#flow .ark-block-step.is-style-default .ark-block-step__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 700;
+  padding: 1.5em 1em;
+  background: #9bc1bc;
+  border-radius: 5px;
+  margin: 0 2em 3em;
+}
+#flow .ark-block-step.is-style-default .ark-block-step__item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: solid 1em transparent;
+  border-top-color: #9bc1bc;
+}
+#flow .ark-block-step.is-style-default .ark-block-step__item .ark-block-step__number {
+  color: #9bc1bc;
+  background: #f7f7f7;
+}
+#flow .ark-block-step.is-style-default .ark-block-step__item .ark-block-step__body {
+  margin-top: 0;
+  font-size: 90%;
+  font-style: italic;
+}
+#flow .ark-block-step.is-style-default .ark-block-step__item .ark-block-step__body p {
+  font-weight: initial;
 }
 
 @keyframes spin {

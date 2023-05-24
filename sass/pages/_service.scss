@@ -93,6 +93,60 @@
   }
 }
 
+
+// Flow section 
+#flow {
+  // override the default arkhe step block 
+  .ark-block-step.is-style-default {
+    .ark-block-step__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      font-weight: 700;
+      padding: 1.5em 1em;
+      background: get-color(primary);
+      border-radius: 5px;
+      margin: 0 2em 3em;
+      
+      &:not(:last-child)::before {
+        // vertical dotted border line on the left
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border: solid 1em transparent;
+        border-top-color: get-color(primary);
+      }
+
+      // the step number
+      .ark-block-step__number {
+        color: get-color(primary);
+        background: get-color(secondary);
+
+        .__label {
+          // color: get-color(accent);
+        }
+      }
+
+      // the paragraph, (ie. the comment if any)
+      .ark-block-step__body {
+        margin-top: 0;
+        font-size: 90%;
+        font-style: italic;
+      
+        p {
+          font-weight: initial;
+        }
+      }
+    }
+  }
+
+}
+
+
+
 // Other stuff
 @keyframes spin {
   from {
