@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
   gsap.from(plusDivider, {
     scrollTrigger: {
       trigger: '.plus-divider',
-      start: 'top 90%',
+      start: 'top bottom',
       // markers: true,
       toggleActions: 'play none none reset',
     },

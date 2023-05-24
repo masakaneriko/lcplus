@@ -175,12 +175,12 @@ gsap.utils.toArray('.highlight > span').forEach((span) => {
 });
 
 
-// NEW DIVIDER PART
+// Plus divider
 const plusDivider = document.querySelectorAll('.plus-divider > span');
 gsap.from(plusDivider, {
   scrollTrigger: {
     trigger: '.plus-divider',
-    start: 'top 90%',
+    start: 'top bottom',
     // markers: true,
     toggleActions: 'play none none reset',
   },
