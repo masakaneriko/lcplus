@@ -7,10 +7,19 @@ const swiper = new Swiper(".swiper", {
   loop: true,
   spaceBetween: 30,
   speed: 4000,
-  slidesPerView: 4,
   allowTouchMove: false,
   autoplay: {
     delay: 0,
+  },
+  breakpoints: {
+    // For screens up to 600px wide (mobile devices)
+    600: {
+      slidesPerView: 2,
+    },
+    // For screens 601px and above (desktop devices)
+    601: {
+      slidesPerView: 4,
+    },
   },
 });
 

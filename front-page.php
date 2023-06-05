@@ -6,7 +6,7 @@
 get_header(); ?>
 
 
-<main>
+<main <?php Arkhe::main_attrs(); ?>>
 
   <div class="alignfull">
     <section id="hero">

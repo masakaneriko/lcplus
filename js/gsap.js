@@ -180,7 +180,7 @@ const plusDivider = document.querySelectorAll('.plus-divider > span');
 gsap.from(plusDivider, {
   scrollTrigger: {
     trigger: '.plus-divider',
-    start: 'top bottom',
+    start: 'top 80%',
     // markers: true,
     toggleActions: 'play none none reset',
   },

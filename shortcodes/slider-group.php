@@ -8,12 +8,16 @@ function slider_group_shortcode() {
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/group_energy.png" alt="">
-          <p>自然エネルギー</p>
+          <div>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/group_energy.png" alt="">
+            <p>自然エネルギー</p>
+          </div>
         </div>
         <div class="swiper-slide">
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/group_education.png" alt="">
-          <p>教育く</p>
+          <div>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/group_education.png" alt="">
+            <p>教育く</p>
+          </div>
         </div>
         <div class="swiper-slide">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/group_agriculture.png" alt="">

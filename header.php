@@ -21,5 +21,18 @@
 	do_action( 'arkhe_after_header' );
 ?>
 	<div id="content" class="l-content">
-		<?php do_action( 'arkhe_start_content' ); // テーマ側でも使用 ?>
+
+		<?php
+      // commenting out the original line below
+      // do_action( 'arkhe_start_content' ); // テーマ側でも使用
+    ?>
+    <?php
+    // removed #top_title_area from specific pages. (default hero and breadcrumbs) 
+    // inc/hooks/self_hooks.php ???
+    // use this for breadcrumb -> Arkhe::get_part( 'other/breadcrumb' );
+      if ( ! is_page_template( 'service-template.php' ) && ! is_page( array( 'about-us', 'contact-us' ) ) ) {
+          do_action( 'arkhe_start_content' );
+      }
+    ?>
+
 		<div class="l-content__body l-container">

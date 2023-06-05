@@ -18,3 +18,10 @@ a {
 .wpforms-submit {
   background-color: get-color(primary)!important;
 }
+
+.telephone {
+  a {
+    color: get-color(primary);
+    text-decoration: underline;
+  }
+}

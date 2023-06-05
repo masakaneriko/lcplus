@@ -20,6 +20,11 @@ a {
   background-color: #9bc1bc !important;
 }
 
+.telephone a {
+  color: #9bc1bc;
+  text-decoration: underline;
+}
+
 body {
   font-family: "Poppins", YakuHanJP, "Noto Sans JP", sans-serif;
 }
@@ -126,7 +131,7 @@ p {
 
 .custom-shape-divider-top-1682382870 {
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -240,6 +245,11 @@ p {
   color: white;
 }
 
+.l-header__center {
+  grid-area: left;
+  padding: 8px 0;
+}
+
 .qanda {
   background: url(../images/qanda.png) no-repeat;
   background-size: 100% 100%;
@@ -259,6 +269,14 @@ p {
 }
 .qanda .arkp-scFaq01 .ark-block-accordion__body::before {
   color: #f7f7f7;
+}
+.qanda .ark-block-section__bodyInner {
+  --arkb-padding: 2rem 0;
+}
+@media (min-width: 600px) {
+  .qanda .ark-block-section__bodyInner {
+    --arkb-padding: 4rem 0;
+  }
 }
 
 .page-id-8 #hero {
@@ -367,6 +385,11 @@ p {
   height: 100%;
   width: auto;
   object-fit: contain;
+}
+@media (min-width: 600px) {
+  .page-id-8 .equals {
+    padding: 4rem 0;
+  }
 }
 .page-id-8 #service figure.arkp-scProductOV02__imgWrapper {
   box-shadow: 0 0 5px #727f83;

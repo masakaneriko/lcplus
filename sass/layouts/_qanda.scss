@@ -5,6 +5,11 @@
   padding-top: 4rem;
   padding-bottom: 4rem;
 
+  // @include respond-to(tablet) {
+  //   padding-top: 4rem;
+  //   padding-bottom: 4rem;
+  // }
+
   .arkp-scFaq01 {
     border-radius: 0.75rem;
     margin-bottom: 2rem;
@@ -21,6 +26,13 @@
     &::before {
       color: get-color(secondary);
       // background: get-color(raisin-black);
+    }
+  }
+
+  .ark-block-section__bodyInner {
+    --arkb-padding: 2rem 0;
+    @include respond-to(tablet) {
+      --arkb-padding: 4rem 0;
     }
   }
 }

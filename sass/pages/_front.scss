@@ -105,8 +105,16 @@
       transition-timing-function: linear !important;
     }
 
-    .swiper-slide p {
-      text-align: center;
+    .swiper-slide {
+      p {
+        text-align: center;
+      }
+      // img {
+      //   max-height: 200px;
+      //   @include respond-to(tablet) {
+      //     max-height: 500px;
+      //   }
+      // }
     }
   }
 
@@ -134,6 +142,11 @@
         width: auto;
         object-fit: contain;
       }
+    }
+  }
+  .equals {
+    @include respond-to(tablet) {
+      padding: 4rem 0;
     }
   }
 

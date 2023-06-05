@@ -1,6 +1,15 @@
 <?php
 
-define('CHILD_THEME_VERSION', '1.0.0');
+// For testing purposes
+// Displays the name of the Template used
+// add_action('wp_head', 'show_template');
+// function show_template()
+// {
+//     global $template;
+//     echo basename($template);
+// }
+
+define('CHILD_THEME_VERSION', '1.6.0');
 
 function arkhe_child_enqueue_styles()
 {
