@@ -13,5 +13,12 @@
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
+
+    &:nth-child(even) {
+      display: none;
+      @include respond-to(desktop) {
+        display: inline-block;
+      }
+    }
   }
 }

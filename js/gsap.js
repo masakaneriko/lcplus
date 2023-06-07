@@ -76,6 +76,26 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     );
   }
+
+
+
+  // Concerns Section
+  const concernItems = document.querySelectorAll(".concern_list_item");
+  gsap.from(concernItems, {
+    scrollTrigger: {
+      trigger: '.concern_list',
+      start: 'top 90%',
+      // markers: true,
+      // toggleActions: 'play none none reset',
+    },
+    y: 100,
+    stagger: 0.75,
+    opacity: 0,
+    duration: 1.3,
+    ease: 'Sine.easeOut',
+  });
+
+
   // Fade-in
   const fadeInElements = document.querySelectorAll(".fadein");
 

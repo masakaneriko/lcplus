@@ -11,13 +11,10 @@ const swiper = new Swiper(".swiper", {
   autoplay: {
     delay: 0,
   },
+  slidesPerView: 2, // default (mobile)
   breakpoints: {
-    // For screens up to 600px wide (mobile devices)
+    // For screens 600px and above (desktop devices)
     600: {
-      slidesPerView: 2,
-    },
-    // For screens 601px and above (desktop devices)
-    601: {
       slidesPerView: 4,
     },
   },
