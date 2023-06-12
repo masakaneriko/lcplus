@@ -395,8 +395,13 @@ p {
   object-fit: contain;
 }
 @media (min-width: 600px) {
-  .page-id-8 .equals {
+  .page-id-8 #equals .equal-sign {
     padding: 4rem 0;
+  }
+}
+@media (min-width: 600px) {
+  .page-id-8 #equals .spacer-responsive {
+    height: 140px !important;
   }
 }
 .page-id-8 #service figure.arkp-scProductOV02__imgWrapper {

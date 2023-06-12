@@ -1,7 +1,7 @@
 <?php
 
-// For testing purposes
-// Displays the name of the Template used
+// // For testing purposes
+// // Displays the name of the Template used
 // add_action('wp_head', 'show_template');
 // function show_template()
 // {
@@ -56,7 +56,7 @@ add_action('wp_enqueue_scripts', 'front_page_enqueue_script');
 require_once(get_stylesheet_directory() . '/shortcodes/slider-group.php');
 require_once(get_stylesheet_directory() . '/shortcodes/slider-price.php');
 require_once(get_stylesheet_directory() . '/shortcodes/tilt-bg.php');
-require_once(get_stylesheet_directory() . '/shortcodes/flow-chart.php');
+// require_once(get_stylesheet_directory() . '/shortcodes/flow-chart.php');
 require_once(get_stylesheet_directory() . '/shortcodes/plus-divider.php');
 
 

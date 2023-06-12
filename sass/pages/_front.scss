@@ -144,9 +144,16 @@
       }
     }
   }
-  .equals {
-    @include respond-to(tablet) {
-      padding: 4rem 0;
+  #equals {
+    .equal-sign {
+      @include respond-to(tablet) {
+        padding: 4rem 0;
+      }
+    }
+    .spacer-responsive {
+      @include respond-to(tablet) {
+        height: 140px!important;
+      }
     }
   }
 
