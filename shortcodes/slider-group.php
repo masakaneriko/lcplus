@@ -1,6 +1,7 @@
 <?php
 
-function slider_group_shortcode() {
+function slider_group_shortcode()
+{
   ob_start(); ?>
 
   <div class="group-slider">
@@ -8,16 +9,12 @@ function slider_group_shortcode() {
     <div class="swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <div>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/group_energy.png" alt="">
-            <p>自然エネルギー</p>
-          </div>
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/group_energy.png" alt="">
+          <p>自然エネルギー</p>
         </div>
         <div class="swiper-slide">
-          <div>
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/group_education.png" alt="">
-            <p>教育く</p>
-          </div>
+          <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/group_education.png" alt="">
+          <p>教育く</p>
         </div>
         <div class="swiper-slide">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/group_agriculture.png" alt="">
@@ -46,8 +43,8 @@ function slider_group_shortcode() {
       </div>
     </div>
   </div>
-  
-  <?php
+
+<?php
   return ob_get_clean();
 }
-add_shortcode( 'slider_group', 'slider_group_shortcode' );
+add_shortcode('slider_group', 'slider_group_shortcode');

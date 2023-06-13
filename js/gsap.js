@@ -202,7 +202,7 @@ gsap.from(plusDivider, {
     trigger: '.plus-divider',
     start: 'top 80%',
     // markers: true,
-    toggleActions: 'play none none reset',
+    // toggleActions: 'play none none reset',
   },
   // rotation: '+=1200',
   y: -100,

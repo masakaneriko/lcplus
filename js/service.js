@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: '.plus-divider',
       start: 'top bottom',
       // markers: true,
-      toggleActions: 'play none none reset',
+      // toggleActions: 'play none none reset',
     },
     // rotation: '+=1200',
     y: -100,
