@@ -1,46 +1,3 @@
-// new timeline
-const tl2 = gsap.timeline();
-
-tl2.from("#service_hero", {
-  autoAlpha: 0,
-});
-// roll the plus image in from the left
-tl2.from(".service_title_plus", {
-  x: -500,
-  rotation: -360,
-  duration: 1.7,
-  // delay: 1,
-  ease: 'easeIn'
-})
-
-  // Fade in letters
-  // Select the text element and split the text into individual characters
-  let textElement = document.querySelector(".service_title h1");
-  let textContent = textElement.textContent.trim();
-
-  // Wrap each character in a span element
-  let charArray = textContent.split('');
-  let newContent = charArray.map(char => `<span>${char}</span>`).join('');
-  textElement.innerHTML = newContent;
-
-  // Select all the span elements and animate their opacity
-  let charElements = document.querySelectorAll('.service_title h1 span');
-  tl2.from(charElements, {
-    opacity: 0,
-    duration: 1,
-    stagger: 0.06
-  },
-  // ">0.3"
-  );
-
-  tl2.from(".service_hero_content", {
-    opacity: 0,
-    scale: 0,
-    ease: "back",
-    duration: 1.3,
-  },
-  ">-0.5"
-  );
 // // new timeline
 // const tl = gsap.timeline();
 // // GSAP animation code
@@ -77,37 +34,83 @@ tl2.from(".service_title_plus", {
 //     "<"
 //   );
 
-
-
 // Wait for the DOM to be loaded
 document.addEventListener("DOMContentLoaded", function () {
 
-  // for flow section
-  const flowItem = document.querySelectorAll("#flow .ark-block-step__item")
+  // new timeline
+  const tl2 = gsap.timeline();
+
+  tl2.from("#service_hero", {
+    autoAlpha: 0,
+  });
+  // roll the plus image in from the left
+  tl2.from(".service_title_plus", {
+    x: -500,
+    rotation: -360,
+    duration: 1.7,
+    // delay: 1,
+    ease: "easeIn",
+  });
+
+  // Fade in letters
+  // Select the text element and split the text into individual characters
+  let textElement = document.querySelector(".service_title h1");
+  let textContent = textElement.textContent.trim();
+
+  // Wrap each character in a span element
+  let charArray = textContent.split("");
+  let newContent = charArray.map((char) => `<span>${char}</span>`).join("");
+  textElement.innerHTML = newContent;
+
+  // Select all the span elements and animate their opacity
+  let charElements = document.querySelectorAll(".service_title h1 span");
+  tl2.from(
+    charElements,
+    {
+      opacity: 0,
+      duration: 1,
+      stagger: 0.06,
+    }
+    // ">0.3"
+  );
+
+  tl2.from(
+    ".service_hero_content",
+    {
+      opacity: 0,
+      scale: 0,
+      ease: "back",
+      duration: 1.3,
+    },
+    ">-0.5"
+  );
+
   
-  gsap.from( flowItem, {
+  // for flow section
+  const flowItem = document.querySelectorAll("#flow .ark-block-step__item");
+
+  gsap.from(flowItem, {
     scrollTrigger: {
-        trigger: flowItem,
-        start: "top 80%",
-        // markers: true,
+      trigger: flowItem,
+      start: "top 80%",
+      // markers: true,
     },
     y: 250,
     autoAlpha: 0,
     stagger: 0.3,
     duration: 1.3,
-});
-
+  });
 
   // rotate item on scroll
-  const width = (window.innerWidth) * (2/3);
+  const width = window.innerWidth * (2 / 3);
 
   gsap.to(".scrololol", {
     scrollTrigger: {
-        // trigger: ".scrololol",
-        scrub: 1,
-        // start: 'top 80%',
-        // markers: true,
-        end: '+=500',
+      // trigger: ".scrololol",
+      scrub: 1,
+      // start: 'top 80%',
+      // markers: true,
+      end: "+=500",
     },
     rotation: 1440,
     duration: 1,
@@ -116,35 +119,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   gsap.to(".scrotate2 > figure > img ", {
     scrollTrigger: {
-        trigger: ".scrotate2 > figure > img",
-        scrub: 3,
-        start: 'top 90%',
-        // markers: true,
-        end: '+=500',
+      trigger: ".scrotate2 > figure > img",
+      scrub: 3,
+      start: "top 90%",
+      // markers: true,
+      end: "+=500",
     },
-    rotation: '-1440',
+    rotation: "-1440",
     duration: 1,
-    x: '-120vw',
-    y: '15vh',
+    x: "-120vw",
+    y: "15vh",
     ease: "none",
   });
 
   // spinner
-  gsap.to('#spinner > img', {
+  gsap.to("#spinner > img", {
     scrollTrigger: {
-      trigger: '#spinner > img',
+      trigger: "#spinner > img",
       scrub: 1,
-      start: 'top bottom',
+      start: "top bottom",
       // markers: true,
     },
     rotation: 360,
     duration: 1,
-
-    
   });
 
   // NEW DIVIDER PART
-  const plusDivider = document.querySelectorAll('.plus-divider > span');
+  const plusDivider = document.querySelectorAll(".plus-divider > span");
   // plusDivider.forEach((span, index) => {
   //   gsap.from(span, {
   //     // rotation: '+=750',
@@ -160,8 +161,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // })
   gsap.from(plusDivider, {
     scrollTrigger: {
-      trigger: '.plus-divider',
-      start: 'top bottom',
+      trigger: ".plus-divider",
+      start: "top bottom",
       // markers: true,
       // toggleActions: 'play none none reset',
     },
@@ -169,9 +170,8 @@ document.addEventListener("DOMContentLoaded", function () {
     y: -100,
     stagger: 0.1,
     opacity: 0,
-    ease: 'Sine.easeOut',
+    ease: "Sine.easeOut",
   });
-
 
   // Fade-in
   const fadeInElements = document.querySelectorAll(".fadein");
@@ -224,7 +224,4 @@ document.addEventListener("DOMContentLoaded", function () {
       // delay: 0.3,
     });
   });
-
-
 });
-

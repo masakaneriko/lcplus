@@ -6,8 +6,8 @@ get_header(); ?>
 
 <main <?php Arkhe::main_attrs(); ?>>
 
-  <?php 
-    // Custom Hero Section
+  <?php
+  // Custom Hero Section
   ?>
   <div id="service_hero" class="alignfull">
     <div class="bg_clip
@@ -28,18 +28,17 @@ get_header(); ?>
         <h1><?php echo the_title(); ?></h1>
       </div>
       <div class="service_hero_content">
-        <div class="service_hero_text">
-
-          <!-- <span><?php echo get_field('hero_span'); ?></span> -->
-          <h2><?php echo get_field('hero_h2'); ?></h2>
-          <p><?php echo get_field('hero_p'); ?></p>
-        </div>
         <div class="service_hero_image">
           <?php
           $image = get_field('hero_image');
           if (!empty($image)) : ?>
             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
           <?php endif; ?>
+        </div>
+        <div class="service_hero_text">
+          <!-- <span><?php echo get_field('hero_span'); ?></span> -->
+          <h2><?php echo get_field('hero_h2'); ?></h2>
+          <p><?php echo get_field('hero_p'); ?></p>
         </div>
       </div>
     </div>

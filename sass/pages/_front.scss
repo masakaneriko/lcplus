@@ -1,12 +1,12 @@
 .page-id-8 {
   #hero {
-    visibility: hidden;
     background: url(../images/fv_bg.png);
     background-size: contain;
     background-repeat: no-repeat;
     overflow: hidden;
     height: 90vh;
     position: relative;
+    visibility: hidden;
 
     .hero-text {
       text-align: center;
@@ -180,6 +180,12 @@
         transform: translateY(-50%);
       }
     }
+
+    .ark-block-heading .ark-block-heading__sub {
+      font-weight: 700;
+      // color: #1d8679;
+      color: get-color(primary, dark);
+    }
   }
 
   // CONCERNS SECTION
@@ -216,6 +222,10 @@
       to {
         transform: translateY(5px);
       }
+    }
+
+    .arkb-marker {
+      background: linear-gradient(transparent var(--arkb-marker-start), get-color(alabaster) 0);
     }
   }
 
