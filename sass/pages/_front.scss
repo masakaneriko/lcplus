@@ -1,5 +1,6 @@
 .page-id-8 {
   #hero {
+    visibility: hidden;
     background: url(../images/fv_bg.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -118,7 +119,7 @@
     }
   }
 
-  // PHILOSOPHY SECTION
+  // PHILOSOPHY SECTION (communication | idea | happy | equals)
   #communication .ark-block-column {
     position: relative;
   }
@@ -157,9 +158,11 @@
     }
   }
 
-  // Service Section
+  // SERVICE SECTION
   #service {
     figure.arkp-scProductOV02__imgWrapper {
+      border-radius: 5px;
+      overflow: hidden;
       box-shadow: 0 0 5px get-color(slate);
     }
 
@@ -179,14 +182,75 @@
     }
   }
 
-  // Concerns Section
+  // CONCERNS SECTION
   #concerns {
+    .concern_list_item {
+      &:nth-child(1) {
+        img {
+          animation: ticktock 5000ms infinite 0.3s ease-in-out;
+        }
+      }
+      &:nth-child(2) {
+        img {
+          animation: pop 2700ms infinite alternate-reverse ease-in-out;
+        }
+      }
+      &:nth-child(3) {
+        img {
+          animation: hop 1900ms infinite alternate-reverse ease-in-out;
+        }
+      }
+    }
+    @keyframes pop {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.05)
+      }
+    }
+    @keyframes hop {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(5px);
+      }
+    }
   }
 
-  // Price List Section
+
+  #strength {
+    @include respond-to(tablet) {
+      .container {
+        max-width: 80%;
+        margin-inline: auto;
+        margin: 0 auto;
+      }
+    }
+    figure {
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 3px get-color(slate);
+    }
+  }
+
+  // PRICE LIST SECTION
   #price {
     overflow-x: hidden;
     padding-bottom: 4rem;
+
+    .swiper-slide {
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 2px 3px get-color(slate);
+    }
+    .swiper-button-next, .swiper-button-prev {
+      color: get-color(primary);
+    }
+    .swiper-pagination-bullet-active {
+      background: get-color(primary);
+    }
   }
 }
 

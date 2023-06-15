@@ -24,15 +24,15 @@ const swiper = new Swiper(".swiper", {
 const swiperPrice = new Swiper(".swiper-price", {
   loop: true,
   spaceBetween: 30,
-  speed: 5000,
+  speed: 6000,
   autoplay: {
-    delay: 1500,
+    delay: 4000,
     disableOnInteraction: false
   },
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: "auto",
+  slidesPerView: 1,
   coverflowEffect: {
     rotate: 50,
     stretch: 0,

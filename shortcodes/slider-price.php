@@ -9,25 +9,22 @@ function slider_price_shortcode()
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <a href="">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_chart.png" alt="">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_sample_web.jpg" alt="">
           </a>
         </div>
         <div class="swiper-slide">
           <a href="">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/ghost.png" alt="">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_sample_dtp.jpg" alt="">
           </a>
         </div>
         <div class="swiper-slide">
           <a href="">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_chart.png" alt="">
-          </a>
-        </div>
-        <div class="swiper-slide">
-          <a href="">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_chart.png" alt="">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_sample_sign.jpg" alt="">
           </a>
         </div>
       </div>
+      <!-- <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div> -->
     </div>
     <div class="swiper-pagination"></div>
   </div>

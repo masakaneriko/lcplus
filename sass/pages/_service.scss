@@ -9,6 +9,7 @@
   position: relative;
   z-index: 0;
   min-height: 75vh; //adjust this as necessary
+  visibility: hidden;
 
   .bg_clip {
     width: 100%;

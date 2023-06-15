@@ -288,6 +288,7 @@ p {
 }
 
 .page-id-8 #hero {
+  visibility: hidden;
   background: url(../images/fv_bg.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -405,6 +406,8 @@ p {
   }
 }
 .page-id-8 #service figure.arkp-scProductOV02__imgWrapper {
+  border-radius: 5px;
+  overflow: hidden;
   box-shadow: 0 0 5px #727f83;
 }
 .page-id-8 #service .title-border-left {
@@ -421,9 +424,57 @@ p {
   top: 50%;
   transform: translateY(-50%);
 }
+.page-id-8 #concerns .concern_list_item:nth-child(1) img {
+  animation: ticktock 5000ms infinite 0.3s ease-in-out;
+}
+.page-id-8 #concerns .concern_list_item:nth-child(2) img {
+  animation: pop 2700ms infinite alternate-reverse ease-in-out;
+}
+.page-id-8 #concerns .concern_list_item:nth-child(3) img {
+  animation: hop 1900ms infinite alternate-reverse ease-in-out;
+}
+@keyframes pop {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+@keyframes hop {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+@media (min-width: 600px) {
+  .page-id-8 #strength .container {
+    max-width: 80%;
+    margin-inline: auto;
+    margin: 0 auto;
+  }
+}
+.page-id-8 #strength figure {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 3px #727f83;
+}
 .page-id-8 #price {
   overflow-x: hidden;
   padding-bottom: 4rem;
+}
+.page-id-8 #price .swiper-slide {
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 3px #727f83;
+}
+.page-id-8 #price .swiper-button-next, .page-id-8 #price .swiper-button-prev {
+  color: #9bc1bc;
+}
+.page-id-8 #price .swiper-pagination-bullet-active {
+  background: #9bc1bc;
 }
 
 .highlight > span {
@@ -442,6 +493,7 @@ p {
   position: relative;
   z-index: 0;
   min-height: 75vh;
+  visibility: hidden;
 }
 #service_hero .bg_clip {
   width: 100%;

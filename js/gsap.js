@@ -5,12 +5,15 @@ gsap.registerPlugin(ScrollTrigger);
 // new timeline
 const tl = gsap.timeline();
 // GSAP animation code
-tl.from(".hero-text", {
-  opacity: 0,
-  duration: 1.3,
-  scale: 0,
-  ease: "back",
-  delay: 1,
+tl.from("#hero", {
+  autoAlpha: 0,
+})
+  .from(".hero-text", {
+    opacity: 0,
+    duration: 1.3,
+    scale: 0,
+    ease: "back",
+    delay: 1,
 })
   .from(
     ".hero-image-center",
@@ -53,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let charElement = document.createElement("span");
 
     // Set the initial opacity of the character to 0
-    charElement.style.opacity = 0;
+    // charElement.style.opacity = 0;
 
     // Add the character to the text element
     textElement.appendChild(charElement);

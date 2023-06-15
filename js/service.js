@@ -1,11 +1,15 @@
 // new timeline
 const tl2 = gsap.timeline();
+
+tl2.from("#service_hero", {
+  autoAlpha: 0,
+});
 // roll the plus image in from the left
 tl2.from(".service_title_plus", {
   x: -500,
   rotation: -360,
   duration: 1.7,
-  // delay: 1,se
+  // delay: 1,
   ease: 'easeIn'
 })
 
@@ -89,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     y: 250,
     autoAlpha: 0,
-    stagger: 0.5,
+    stagger: 0.3,
     duration: 1.3,
 });
 
