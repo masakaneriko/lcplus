@@ -1,47 +1,48 @@
-gsap.registerPlugin(ScrollTrigger);
-
 // Front Page Animations
 
-// new timeline
-const tl = gsap.timeline();
-// GSAP animation code
-tl.from("#hero", {
-  autoAlpha: 0,
-})
-  .from(".hero-text", {
-    opacity: 0,
-    duration: 1.3,
-    scale: 0,
-    ease: "back",
-    delay: 1,
-})
-  .from(
-    ".hero-image-center",
-    {
-      opacity: 0,
-      duration: 1,
-    }
-    // ">-0.5"
-  )
-  .from(
-    ".hero-image-left",
-    {
-      opacity: 0,
-      duration: 1,
-    }
-    // ">-0.5"
-  )
-  .from(
-    ".hero-image-right",
-    {
-      opacity: 0,
-      duration: 1,
-    },
-    ">-0.5"
-  );
+gsap.registerPlugin(ScrollTrigger);
 
 // Wait for the DOM to be loaded
 document.addEventListener("DOMContentLoaded", function () {
+
+  // new timeline
+  const tl = gsap.timeline();
+  // GSAP animation code
+  tl.from("#hero", {
+    autoAlpha: 0,
+  })
+    .from(".hero-text", {
+      opacity: 0,
+      duration: 1.3,
+      scale: 0,
+      ease: "back",
+      delay: 1,
+    })
+    .from(
+      ".hero-image-center",
+      {
+        opacity: 0,
+        duration: 1,
+      }
+      // ">-0.5"
+    )
+    .from(
+      ".hero-image-left",
+      {
+        opacity: 0,
+        duration: 1,
+      }
+      // ">-0.5"
+    )
+    .from(
+      ".hero-image-right",
+      {
+        opacity: 0,
+        duration: 1,
+      },
+      ">-0.5"
+    );
+
   // Fade in letters
   // Select the text element and split the text into individual characters
   let textElement = document.querySelector(".typewriter");
@@ -80,14 +81,12 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 
-
-
   // Concerns Section
   const concernItems = document.querySelectorAll(".concern_list_item");
   gsap.from(concernItems, {
     scrollTrigger: {
-      trigger: '.concern_list',
-      start: 'top 90%',
+      trigger: ".concern_list",
+      start: "top 90%",
       // markers: true,
       // toggleActions: 'play none none reset',
     },
@@ -95,9 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
     stagger: 0.75,
     opacity: 0,
     duration: 1.3,
-    ease: 'Sine.easeOut',
+    ease: "Sine.easeOut",
   });
-
 
   // Fade-in
   const fadeInElements = document.querySelectorAll(".fadein");
@@ -181,35 +179,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Equals Section highlight text
+  // added custom class '.highlight' to arkhe maker '.arkb-marker'
+  // using custom styles in _front.scss to control background width
+  // i dont think this array is necessary lol
+  gsap.utils.toArray(".highlight > span").forEach((span) => { 
+    ScrollTrigger.create({
+      trigger: span,
+      start: "top 90%",
+      // toggleClass: "active",
+      onEnter: () => span.classList.add("active"),
+    });
+  });
 
-
-});
-
-
-// highlight text on scroll
-// use arkhe maker (.arkb-marker)!!!
-gsap.utils.toArray('.highlight > span').forEach((span) => {
-  ScrollTrigger.create({
-    trigger: span,
-    start: "top 80%",
-    // toggleClass: "active",
-    onEnter: () => span.classList.add("active")
-  })
-});
-
-
-// Plus divider
-const plusDivider = document.querySelectorAll('.plus-divider > span');
-gsap.from(plusDivider, {
-  scrollTrigger: {
-    trigger: '.plus-divider',
-    start: 'top 80%',
-    // markers: true,
-    // toggleActions: 'play none none reset',
-  },
-  // rotation: '+=1200',
-  y: -100,
-  stagger: 0.1,
-  opacity: 0,
-  ease: 'Sine.easeOut',
+  // Plus divider
+  const plusDivider = document.querySelectorAll(".plus-divider > span");
+  gsap.from(plusDivider, {
+    scrollTrigger: {
+      trigger: ".plus-divider",
+      start: "top 80%",
+      // markers: true,
+      // toggleActions: 'play none none reset',
+    },
+    // rotation: '+=1200',
+    y: -100,
+    stagger: 0.1,
+    opacity: 0,
+    ease: "Sine.easeOut",
+  });
 });

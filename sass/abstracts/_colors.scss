@@ -1,5 +1,6 @@
 // Colors
 $primary-color: #9bc1bc;
+$primary-color-dark: #62a59f;
 // $secondary-color: #235789;
 $secondary-color: #f7f7f7;
 $accent-color: #ef6461;
@@ -18,7 +19,7 @@ $colors: (
   primary: (
     base: $primary-color,
     light: lighten($primary-color, $lighten),
-    dark: darken($primary-color, $darken),
+    dark: $primary-color-dark,
   ),
   secondary: (
       base: $secondary-color,

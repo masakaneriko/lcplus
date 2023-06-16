@@ -7,11 +7,19 @@
     height: 90vh;
     position: relative;
     visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 
     .hero-text {
       text-align: center;
       text-shadow: 2px 2px 5px white;
-      margin-top: 5rem;
+      // margin-top: 7rem;
+      // @include respond-to(tablet) {
+      //   margin-top: 5rem;
+      // }
     }
 
     .hero-image {
@@ -26,17 +34,27 @@
       .hero-image-left,
       .hero-image-right {
         position: absolute;
-        max-width: 250px;
+        max-width: 30%;
+        @include respond-to(tablet) {
+          max-width: 45%;
+        }
       }
       .hero-image-left {
-        left: -27%;
-        bottom: -5%;
+        left: 0;
+        bottom: 5%;
         animation: ticktock 3s infinite ease-in-out;
+        @include respond-to(tablet) {
+          left: -27%;
+          bottom: -5%;
+        }
       }
       .hero-image-right {
-        right: -27%;
+        right: 0;
         top: 5%;
         animation: ticktock 1s infinite 0.3s ease-in-out;
+        @include respond-to(tablet) {
+          right: -27%;
+        }
       }
       // .hero-image-center {
       //   animation: tvflash 100ms infinite ease-in;
@@ -153,8 +171,25 @@
     }
     .spacer-responsive {
       @include respond-to(tablet) {
-        height: 140px!important;
+        height: 140px !important;
       }
+    }
+    // highlight text
+    // overrides the arkhe marker (.arkb-marker)
+    .highlight > span {
+      background-image: linear-gradient(get-color(primary), get-color(primary));
+      background-size: 0 40%;
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      transition: background-size 1300ms ease-in-out 1000ms;
+    }
+    .highlight > span.active {
+      background-size: 100% 40%;
+    }
+  }
+  .plus-divider {
+    @include respond-to(tablet) {
+      margin: 10rem auto;
     }
   }
 
@@ -183,7 +218,6 @@
 
     .ark-block-heading .ark-block-heading__sub {
       font-weight: 700;
-      // color: #1d8679;
       color: get-color(primary, dark);
     }
   }
@@ -212,7 +246,7 @@
         transform: scale(1);
       }
       to {
-        transform: scale(1.05)
+        transform: scale(1.05);
       }
     }
     @keyframes hop {
@@ -228,7 +262,6 @@
       background: linear-gradient(transparent var(--arkb-marker-start), get-color(alabaster) 0);
     }
   }
-
 
   #strength {
     @include respond-to(tablet) {
@@ -255,24 +288,12 @@
       overflow: hidden;
       box-shadow: 0 2px 3px get-color(slate);
     }
-    .swiper-button-next, .swiper-button-prev {
+    .swiper-button-next,
+    .swiper-button-prev {
       color: get-color(primary);
     }
     .swiper-pagination-bullet-active {
       background: get-color(primary);
     }
   }
-}
-
-// highlight text
-// overrides the arkhe marker (.arkb-marker)
-.highlight > span {
-  background-image: linear-gradient(get-color(accent), get-color(accent));
-  background-size: 0 40%;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  transition: background-size 1.3s ease-in-out;
-}
-.highlight > span.active {
-  background-size: 100% 40%;
 }

@@ -24,7 +24,7 @@ const swiper = new Swiper(".swiper", {
 const swiperPrice = new Swiper(".swiper-price", {
   loop: true,
   spaceBetween: 30,
-  speed: 6000,
+  speed: 5500,
   autoplay: {
     delay: 4000,
     disableOnInteraction: false
