@@ -14,6 +14,7 @@
     align-content: center;
 
     .hero-text {
+      width: 100%;
       text-align: center;
       text-shadow: 2px 2px 5px white;
       // margin-top: 7rem;
@@ -82,7 +83,15 @@
 
     .lc-rotate-text {
       position: absolute;
-      animation: spin 10s linear reverse infinite;
+      animation: spin 10s linear reverse infinite, blowup 1500ms ease-in-out infinite alternate-reverse;
+    }
+    @keyframes blowup {
+      from {
+        transform: scale(0) rotate(0deg);
+      }
+      to {
+        transform: scale(5) rotate(360deg);
+      }
     }
 
     .lc-rotate-plus {
@@ -141,28 +150,26 @@
   #communication .ark-block-column {
     position: relative;
   }
-  .philcomm-image {
+  .philcomm-image, .idea-image, .happy-image {
     position: absolute;
     top: 0;
-    left: 0;
     margin: 0;
     height: 100%;
-    width: 100%;
-
-    .philcomm-image-main {
-      height: 100%;
-      width: 50%;
-      margin-left: auto;
-
-      //think we need to add the images with ::before and ::after here
-
-      img {
-        height: 100%;
-        width: auto;
-        object-fit: contain;
-      }
-    }
+    width: 50%;
+    display: flex;
+    align-items: center;
   }
+  .philcomm-image {
+    right: 0;
+  }
+  .idea-image {
+    left: 0;
+  }
+  .happy-image {
+    width: 100%;
+    align-items: flex-start;
+  }
+
   #equals {
     .equal-sign {
       @include respond-to(tablet) {
@@ -259,7 +266,9 @@
     }
 
     .arkb-marker {
-      background: linear-gradient(transparent var(--arkb-marker-start), get-color(alabaster) 0);
+      background: linear-gradient(transparent var(--arkb-marker-start), get-color(primary, dark) 0);
+      font-style: italic;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
     }
   }
 

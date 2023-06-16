@@ -25,7 +25,7 @@ get_header(); ?>
       </div>
     </section>
     <div class="lc-rotate">
-      <img class="lc-rotate-text" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rotate-lc-text.png" alt="">
+      <img class="lc-rotate-text" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rotate_lc_text.svg" alt="">
       <img class="lc-rotate-plus" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rotate-lc-plus.png" alt="">
     </div>
   </div>
