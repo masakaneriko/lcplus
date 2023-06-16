@@ -418,13 +418,35 @@ p {
 }
 .page-id-8 .philcomm-image {
   right: 0;
+  animation: ticktock 1500ms infinite ease-in-out;
 }
 .page-id-8 .idea-image {
   left: 0;
+  animation: slide 5000ms infinite alternate-reverse linear;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(10%);
+  }
 }
 .page-id-8 .happy-image {
   width: 100%;
   align-items: flex-start;
+  animation: pop 1900ms infinite alternate-reverse ease-in-out;
+}
+.page-id-8 #idea .ark-block-section__color {
+  height: 100vh;
+  width: 100vw;
+  border-bottom: 10px solid black;
+  padding-top: 20vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(https://lc-plus.net/wp-content/themes/lcplus/images/bg_bubble.svg);
+  background-color: initial !important;
 }
 @media (min-width: 600px) {
   .page-id-8 #equals .equal-sign {
@@ -614,6 +636,9 @@ p {
   }
 }
 
+#works #works_h2 {
+  scroll-margin-top: 8rem;
+}
 #works .comment {
   border: 1px solid #313638;
 }

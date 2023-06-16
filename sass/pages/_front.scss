@@ -150,6 +150,7 @@
   #communication .ark-block-column {
     position: relative;
   }
+
   .philcomm-image, .idea-image, .happy-image {
     position: absolute;
     top: 0;
@@ -161,13 +162,38 @@
   }
   .philcomm-image {
     right: 0;
+    animation: ticktock 1500ms infinite ease-in-out;
   }
   .idea-image {
     left: 0;
+    animation: slide 5000ms infinite alternate-reverse linear;
+  }
+  @keyframes slide {
+    from {
+      transform: translateX(0)
+    }
+    to {
+      transform: translateX(10%)
+    }
   }
   .happy-image {
     width: 100%;
     align-items: flex-start;
+    animation: pop 1900ms infinite alternate-reverse ease-in-out;
+  }
+
+  #idea {
+    .ark-block-section__color {
+      height: 100vh;
+      width: 100vw;
+      border-bottom: 10px solid black;
+      padding-top: 20vh;
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(https://lc-plus.net/wp-content/themes/lcplus/images/bg_bubble.svg);
+      background-color: initial!important;
+    }
   }
 
   #equals {

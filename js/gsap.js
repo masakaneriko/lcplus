@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
       duration: 1.3,
       scale: 0,
       ease: "back",
-      delay: 1,
+      // delay: 1,
     })
     .from(
       ".hero-image-center",

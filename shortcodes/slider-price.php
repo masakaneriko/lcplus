@@ -8,17 +8,17 @@ function slider_price_shortcode()
     <div class="swiper-price">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <a href="">
+          <a href="https:/lc-plus.net/web#works_h2">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_sample_web.jpg" alt="">
           </a>
         </div>
         <div class="swiper-slide">
-          <a href="">
+          <a href="https:/lc-plus.net/dtp#works">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_sample_dtp.jpg" alt="">
           </a>
         </div>
         <div class="swiper-slide">
-          <a href="">
+          <a href="https:/lc-plus.net/sign#works">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_sample_sign.jpg" alt="">
           </a>
         </div>
