@@ -14,7 +14,7 @@ function slider_group_shortcode()
         </div>
         <div class="swiper-slide">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/group_education.png" alt="">
-          <p>教育く</p>
+          <p>教育</p>
         </div>
         <div class="swiper-slide">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/group_agriculture.png" alt="">
@@ -30,7 +30,7 @@ function slider_group_shortcode()
         </div>
         <div class="swiper-slide">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/group_education.png" alt="">
-          <p>教育く</p>
+          <p>教育</p>
         </div>
         <div class="swiper-slide">
           <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/group_agriculture.png" alt="">

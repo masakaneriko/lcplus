@@ -19,14 +19,14 @@ get_header(); ?>
         </h1>
       </div>
       <div class="hero-image">
-        <img class="hero-image-center" src="<?php echo get_stylesheet_directory_uri(); ?>/images/monitor.png" alt="">
-        <img class="hero-image-left" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hero_1.png" alt="">
-        <img class="hero-image-right" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hero_2.png" alt="">
+        <img class="hero-image-center" src="<?php echo get_stylesheet_directory_uri(); ?>/images/lc_monitor.png" alt="monitor with logo">
+        <img class="hero-image-left" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hero_1.png" alt="image of people working">
+        <img class="hero-image-right" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hero_2.png" alt="image of people in a video call">
       </div>
     </section>
     <div class="lc-rotate">
-      <img class="lc-rotate-text" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rotate_lc_text.svg" alt="">
-      <img class="lc-rotate-plus" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rotate-lc-plus.png" alt="">
+      <img class="lc-rotate-text" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rotate_lc_text.svg" alt="rotating text for life communication plus">
+      <img class="lc-rotate-plus" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rotate-lc-plus.png" alt="icon of a plus sign">
     </div>
   </div>
 

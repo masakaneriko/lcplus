@@ -4,7 +4,7 @@ $height: 60px;
   position: relative;
   height: $height;
 }
-.tilt-bg.tilt-bg-top {
+.tilt-bg.tilt-bg-left {
   transform: scale(-1);
 }
 
@@ -27,5 +27,11 @@ $height: 60px;
 }
 
 .custom-shape-divider-top-1682382870 .shape-fill {
-  fill: #9bc1bc;
+  fill: get-color(primary);
+}
+
+.tilt-bg-left.bg-secondary {
+  .shape-fill {
+    fill: get-color(secondary);
+  }
 }

@@ -7,6 +7,7 @@ const swiper = new Swiper(".swiper", {
   loop: true,
   spaceBetween: 30,
   speed: 4000,
+  lazy: true,
   allowTouchMove: false,
   autoplay: {
     delay: 0,
@@ -40,6 +41,7 @@ const swiperPrice = new Swiper(".swiper-price", {
     modifier: 1,
     slideShadows: true,
   },
+  lazy: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
