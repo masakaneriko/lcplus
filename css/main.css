@@ -7,6 +7,14 @@ a {
   cursor: pointer;
 }
 
+#header {
+  position: fixed;
+}
+
+.l-content {
+  top: var(--ark-header_height);
+}
+
 .c-gnav .__mainText {
   font-weight: 700;
 }
@@ -133,7 +141,7 @@ p {
   height: 60px;
 }
 
-.tilt-bg.tilt-bg-top {
+.tilt-bg.tilt-bg-left {
   transform: scale(-1);
 }
 
@@ -157,6 +165,10 @@ p {
 
 .custom-shape-divider-top-1682382870 .shape-fill {
   fill: #9bc1bc;
+}
+
+.tilt-bg-left.bg-secondary .shape-fill {
+  fill: #f7f7f7;
 }
 
 #contact::after, #contact::before {
@@ -294,12 +306,12 @@ p {
   overflow: hidden;
   height: 90vh;
   position: relative;
-  visibility: hidden;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  visibility: hidden;
 }
 .page-id-8 #hero .hero-text {
   width: 100%;
@@ -350,16 +362,21 @@ p {
 .page-id-8 .lc-rotate {
   position: absolute;
   display: flex;
-  width: 300px;
+  width: 100px;
   justify-content: center;
   align-items: center;
   z-index: 10;
-  right: 0;
+  right: 10px;
   bottom: 100px;
+}
+@media (min-width: 600px) {
+  .page-id-8 .lc-rotate {
+    width: 300px;
+  }
 }
 .page-id-8 .lc-rotate .lc-rotate-text {
   position: absolute;
-  animation: spin 10s linear reverse infinite, blowup 1500ms ease-in-out infinite alternate-reverse;
+  animation: spin 40s linear reverse infinite;
 }
 @keyframes blowup {
   from {
@@ -401,13 +418,18 @@ p {
   -o-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
 }
+.page-id-8 .group-slider .swiper-slide img {
+  border-radius: 20px;
+}
 .page-id-8 .group-slider .swiper-slide p {
   text-align: center;
 }
 .page-id-8 #communication .ark-block-column {
   position: relative;
 }
-.page-id-8 .philcomm-image, .page-id-8 .idea-image, .page-id-8 .happy-image {
+.page-id-8 .philcomm-image,
+.page-id-8 .idea-image,
+.page-id-8 .happy-image {
   position: absolute;
   top: 0;
   margin: 0;
@@ -434,19 +456,26 @@ p {
 }
 .page-id-8 .happy-image {
   width: 100%;
-  align-items: flex-start;
+  justify-content: center;
   animation: pop 1900ms infinite alternate-reverse ease-in-out;
+  top: -10%;
 }
 .page-id-8 #idea .ark-block-section__color {
   height: 100vh;
   width: 100vw;
-  border-bottom: 10px solid black;
-  padding-top: 20vh;
   background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 200%;
   background-image: url(https://lc-plus.net/wp-content/themes/lcplus/images/bg_bubble.svg);
   background-color: initial !important;
+  animation: parallaxSlide 120s infinite linear;
+}
+@keyframes parallaxSlide {
+  from {
+    background-position: -200vw -100vh;
+  }
+  to {
+    background-position: 200vw 100vh;
+  }
 }
 @media (min-width: 600px) {
   .page-id-8 #equals .equal-sign {
@@ -527,13 +556,35 @@ p {
   font-size: clamp(1.5rem, 2.5vw, 2rem);
 }
 @media (min-width: 600px) {
+  .page-id-8 #strength {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
   .page-id-8 #strength .container {
     max-width: 80%;
     margin-inline: auto;
     margin: 0 auto;
   }
 }
+.page-id-8 #strength .ark-block-section__color {
+  background-color: #9b51e0;
+  opacity: 1;
+  height: 100vh;
+  width: 100vw;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url(https://lc-plus.net/wp-content/themes/lcplus/images/strength.webp);
+  background-color: initial !important;
+  top: -60px;
+  z-index: -1;
+  filter: opacity(0.25);
+}
+.page-id-8 #strength .ark-block-section__body {
+  border-radius: 20px;
+  text-shadow: 0 0 10px white;
+}
 .page-id-8 #strength figure {
+  display: none !important;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 0 3px #727f83;

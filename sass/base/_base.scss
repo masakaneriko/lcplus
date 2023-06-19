@@ -7,9 +7,22 @@ a {
 }
 
 
+// changed arkhe's default header position: sticky to fixed
+// in response to parallax effects breaking navbar on scroll
+#header {
+  position: fixed;
+}
+.l-content {
+  top: var(--ark-header_height);
+}
+
+
 // Arkhe's global nav
 .c-gnav .__mainText {
   font-weight: 700;
+}
+.l-header[data-pcfix="1"] {
+  // position: fixed;
 }
 
 .wpforms-submit-container {

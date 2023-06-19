@@ -4,7 +4,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Wait for the DOM to be loaded
 document.addEventListener("DOMContentLoaded", function () {
-
   // new timeline
   const tl = gsap.timeline();
   // GSAP animation code
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     autoAlpha: 0,
   })
     .from(".hero-text", {
-      opacity: 0,
       duration: 1.3,
       scale: 0,
       ease: "back",
@@ -21,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .from(
       ".hero-image-center",
       {
-        opacity: 0,
+        autoAlpha: 0,
         duration: 1,
       }
       // ">-0.5"
@@ -29,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .from(
       ".hero-image-left",
       {
-        opacity: 0,
+        autoAlpha: 0,
         duration: 1,
       }
       // ">-0.5"
@@ -37,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .from(
       ".hero-image-right",
       {
-        opacity: 0,
+        autoAlpha: 0,
         duration: 1,
       },
       ">-0.5"
@@ -91,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // toggleActions: 'play none none reset',
     },
     y: 100,
-    stagger: 0.75,
+    stagger: 0.6,
     opacity: 0,
     duration: 1.3,
     ease: "Sine.easeOut",
@@ -183,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // added custom class '.highlight' to arkhe maker '.arkb-marker'
   // using custom styles in _front.scss to control background width
   // i dont think this array is necessary lol
-  gsap.utils.toArray(".highlight > span").forEach((span) => { 
+  gsap.utils.toArray(".highlight > span").forEach((span) => {
     ScrollTrigger.create({
       trigger: span,
       start: "top 90%",
