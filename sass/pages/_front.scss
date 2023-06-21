@@ -1,9 +1,11 @@
 .page-id-8 {
   #hero {
-    background: url(../images/fv_bg.png);
-    background-size: contain;
+    // background: url(../images/bg_fv.png);
+    background: url(../images/bg_washii.webp);
+    // background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden;
+    overflow-x: hidden;
     height: 90vh;
     position: relative;
     display: flex;
@@ -12,6 +14,12 @@
     justify-content: center;
     align-content: center;
     visibility: hidden;
+
+    #lottie {
+      position: absolute;
+      top: 20%;
+      transform: rotate(-13deg);
+    }
 
     .hero-text {
       width: 100%;
@@ -124,6 +132,20 @@
     }
   }
 
+  #test {
+    svg {
+      stroke-dasharray: 4004;
+      stroke-dashoffset: 4004;
+      pointer-events: none;
+      animation: animateDash 5s linear forwards infinite;
+    }
+    @keyframes animateDash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+
   // ABOUT US SECTION
   .group-slider {
     h3 {
@@ -203,6 +225,10 @@
       background-image: url(https://lc-plus.net/wp-content/themes/lcplus/images/bg_bubble.svg);
       background-color: initial !important;
       animation: parallaxSlide 120s infinite linear;
+
+      @include respond-to(tablet) {
+        background-size: 100%;
+      }
     }
     @keyframes parallaxSlide {
       from {
@@ -341,13 +367,13 @@
       background-color: initial !important;
       top: -60px;
       z-index: -1;
-      filter: opacity(0.25);
+      filter: opacity(0.15);
     }
 
     .ark-block-section__body {
       // background: rgba(155, 193, 188, 0.75);
       border-radius: 20px;
-      text-shadow: 0 0 10px white;
+      text-shadow: 2px 2px 2px white;
     }
 
     figure {

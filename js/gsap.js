@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     autoAlpha: 0,
   })
     .from(".hero-text", {
-      duration: 1.3,
+      duration: 1.2,
       scale: 0,
       ease: "back",
       // delay: 1,
@@ -21,16 +21,16 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         autoAlpha: 0,
         duration: 1,
-      }
-      // ">-0.5"
+      },
+      ">-0.5"
     )
     .from(
       ".hero-image-left",
       {
         autoAlpha: 0,
         duration: 1,
-      }
-      // ">-0.5"
+      },
+      ">-0.2"
     )
     .from(
       ".hero-image-right",

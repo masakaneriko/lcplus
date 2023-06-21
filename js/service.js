@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
   tl2.from(".service_title_plus", {
     x: -500,
     rotation: -360,
-    duration: 1.7,
+    duration: 1,
     // delay: 1,
     ease: "easeIn",
   });
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     charElements,
     {
       opacity: 0,
-      duration: 1,
+      duration: 0.9,
       stagger: 0.06,
     }
     // ">0.3"
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ease: "back",
       duration: 1.3,
     },
-    ">-0.5"
+    ">-0.7"
   );
 
   

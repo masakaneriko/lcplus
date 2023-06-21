@@ -37,7 +37,7 @@ function enqueue_child_theme_styles()
 }
 add_action('wp_enqueue_scripts', 'enqueue_child_theme_styles');
 
-// add GSAP & swiper to front-page
+// add GSAP, swiper and lottie to front-page
 function front_page_enqueue_script()
 {
   if (is_front_page()) {
@@ -48,6 +48,8 @@ function front_page_enqueue_script()
     wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', array(), true );
     wp_enqueue_style( 'swiper-styles', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css', array());
     wp_enqueue_script('swiper-js', get_stylesheet_directory_uri() . '/js/swiper.js', array('swiper'), CHILD_THEME_VERSION, true);
+    wp_enqueue_script('lottie', 'https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js', array(), null, true);
+    wp_enqueue_script('lottie-script', get_stylesheet_directory_uri() . '/js/lottie.js', array('lottie'), CHILD_THEME_VERSION, true);
   }
 }
 add_action('wp_enqueue_scripts', 'front_page_enqueue_script');

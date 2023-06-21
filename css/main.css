@@ -300,10 +300,10 @@ p {
 }
 
 .page-id-8 #hero {
-  background: url(../images/fv_bg.png);
-  background-size: contain;
+  background: url(../images/bg_washii.webp);
+  background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
+  overflow-x: hidden;
   height: 90vh;
   position: relative;
   display: flex;
@@ -312,6 +312,11 @@ p {
   justify-content: center;
   align-content: center;
   visibility: hidden;
+}
+.page-id-8 #hero #lottie {
+  position: absolute;
+  top: 20%;
+  transform: rotate(-13deg);
 }
 .page-id-8 #hero .hero-text {
   width: 100%;
@@ -409,6 +414,17 @@ p {
     transform: rotate(0deg);
   }
 }
+.page-id-8 #test svg {
+  stroke-dasharray: 4004;
+  stroke-dashoffset: 4004;
+  pointer-events: none;
+  animation: animateDash 5s linear forwards infinite;
+}
+@keyframes animateDash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 .page-id-8 .group-slider h3 {
   text-align: center;
   margin: 8rem 0 3rem;
@@ -468,6 +484,11 @@ p {
   background-image: url(https://lc-plus.net/wp-content/themes/lcplus/images/bg_bubble.svg);
   background-color: initial !important;
   animation: parallaxSlide 120s infinite linear;
+}
+@media (min-width: 600px) {
+  .page-id-8 #idea .ark-block-section__color {
+    background-size: 100%;
+  }
 }
 @keyframes parallaxSlide {
   from {
@@ -577,11 +598,11 @@ p {
   background-color: initial !important;
   top: -60px;
   z-index: -1;
-  filter: opacity(0.25);
+  filter: opacity(0.15);
 }
 .page-id-8 #strength .ark-block-section__body {
   border-radius: 20px;
-  text-shadow: 0 0 10px white;
+  text-shadow: 2px 2px 2px white;
 }
 .page-id-8 #strength figure {
   display: none !important;
@@ -675,7 +696,7 @@ p {
   }
 }
 #service_hero .service_hero_content .service_hero_image {
-  animation: pop 1s ease-in-out infinite alternate-reverse;
+  animation: pop 2300ms ease-in-out infinite alternate-reverse;
   max-width: 80%;
 }
 @media (min-width: 600px) {
@@ -686,9 +707,18 @@ p {
     top: -3em;
   }
 }
+#service_hero .service_hero_content .service_hero_image img {
+  max-height: 500px;
+}
 
 #works #works_h2 {
   scroll-margin-top: 8rem;
+}
+#works .ark-block-column figure {
+  box-shadow: 0 0 2px #727f83;
+}
+#works .ark-block-column .arkp-gnRichClmn05__itemTtl {
+  color: #62a59f;
 }
 #works .comment {
   border: 1px solid #313638;
