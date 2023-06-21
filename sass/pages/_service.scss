@@ -86,13 +86,16 @@
     }
 
     .service_hero_image {
-      animation: pop 1s ease-in-out infinite alternate-reverse;
+      animation: pop 2300ms ease-in-out infinite alternate-reverse;
       max-width: 80%;
       @include respond-to(tablet) {
         order: 2;
         width: min(450px, 30vw);
         position: relative;
         top: -3em;
+      }
+      img {
+        max-height: 500px;
       }
     }
   }
@@ -101,6 +104,14 @@
 #works {
   #works_h2 {
     scroll-margin-top: 8rem; // this might need a bit more adjusting. maybe fix plus_divider instead
+  }
+  .ark-block-column {
+    figure {
+      box-shadow: 0 0 2px get-color(slate);
+    }
+    .arkp-gnRichClmn05__itemTtl {
+      color: get-color(primary, dark);
+    }
   }
   .comment {
     border: 1px solid get-color(raisin-black);
