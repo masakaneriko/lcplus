@@ -7,5 +7,5 @@ document.addEventListener("DOMContentLoaded", function () {
       autoplay: true,
       path: "https://lc-plus.net/wp-content/themes/lcplus/js/flow_2.json",
     });
-  }, 1500);
+  }, 2000);
 });
