@@ -96,21 +96,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Fade-in
-  const fadeInElements = document.querySelectorAll(".fadein");
+  // const fadeInElements = document.querySelectorAll(".fadein");
 
-  fadeInElements.forEach((element) => {
-    gsap.from(element, {
-      scrollTrigger: {
-        trigger: element,
-        start: "top 90%",
-        // markers: true,
-        // toggleActions: "play none none none",
-      },
-      opacity: 0,
-      duration: 1.7,
-      delay: 0.3,
-    });
-  });
+  // fadeInElements.forEach((element) => {
+  //   gsap.from(element, {
+  //     scrollTrigger: {
+  //       trigger: element,
+  //       start: "top 90%",
+  //       // markers: true,
+  //       // toggleActions: "play none none none",
+  //     },
+  //     opacity: 0,
+  //     duration: 1.7,
+  //     delay: 0.3,
+  //   });
+  // });
 
   // Fade-in Up
   const fadeInUpElements = document.querySelectorAll(".fadein-up");
@@ -204,5 +204,19 @@ document.addEventListener("DOMContentLoaded", function () {
     stagger: 0.1,
     opacity: 0,
     ease: "Sine.easeOut",
+  });
+
+  // GSAP timeline for the SVG animation
+  const tl_svg = gsap.timeline();
+
+  // Add animation to the timeline
+  tl_svg.to(".svg_animate", { strokeDashoffset: 0, duration: 5, ease: "linear" });
+
+  // Create ScrollTrigger
+  ScrollTrigger.create({
+    animation: tl_svg,
+    trigger: ".svg_animate",
+    start: "top 10%",
+    markers: true,
   });
 });

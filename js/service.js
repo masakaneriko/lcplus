@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // rotate item on scroll
-  const width = window.innerWidth * (2 / 3);
+  const width = window.innerWidth * (1 / 3);
 
   gsap.to(".scrololol", {
     scrollTrigger: {

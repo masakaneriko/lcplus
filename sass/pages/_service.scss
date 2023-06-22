@@ -106,12 +106,11 @@
 }
 // Price Section
 #works {
-  #works_h2 {
-    scroll-margin-top: 8rem; // this might need a bit more adjusting. maybe fix plus_divider instead
-  }
+  scroll-margin-top: 8rem; // this might need a bit more adjusting
+
   .ark-block-column {
     figure {
-      box-shadow: 0 0 2px get-color(slate);
+      box-shadow: 1px 1px 3px get-color(slate);
     }
     .arkp-gnRichClmn05__itemTtl {
       color: get-color(primary, dark);
@@ -119,6 +118,18 @@
   }
   .comment {
     border: 1px solid get-color(raisin-black);
+  }
+}
+
+#strength {
+  .ark-block-section__color {
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url(https://lc-plus.net/wp-content/themes/lcplus/images/strength.webp);
+    background-position: 80% bottom;
+    background-color: initial !important;
+    z-index: -1;
+    filter: opacity(0.15);
   }
 }
 
@@ -132,7 +143,7 @@
       flex-direction: column;
       font-size: clamp(1rem, 1.5vw, 1.2rem);
       font-weight: 700;
-      padding: 1.5em 1em; 
+      padding: 1.5em 1em;
       background: get-color(primary);
       border-radius: 5px;
       margin: 0 2em 3em;

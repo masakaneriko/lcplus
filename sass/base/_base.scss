@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: auto;
+}
 body {
   background: get-color(secondary);
 }
@@ -5,7 +8,6 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
-
 
 // changed arkhe's default header position: sticky to fixed
 // in response to parallax effects breaking navbar on scroll

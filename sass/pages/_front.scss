@@ -19,7 +19,8 @@
       position: absolute;
       top: 20%;
       transform: rotate(-13deg);
-      max-width: 90%;
+      width: 90%;
+      height: auto;
     }
 
     .hero-text {
@@ -135,10 +136,10 @@
 
   #test {
     svg {
-      stroke-dasharray: 4004;
-      stroke-dashoffset: 4004;
-      pointer-events: none;
-      animation: animateDash 5s linear forwards infinite;
+      max-width: 100%;
+      stroke-dasharray: 6000;
+      stroke-dashoffset: 6000;
+      // animation: animateDash 5s linear forwards;
     }
     @keyframes animateDash {
       to {
@@ -253,6 +254,9 @@
       @include respond-to(tablet) {
         padding: 4rem 0;
       }
+      img {
+        width: min(67px, 15%);
+      }
     }
     .spacer-responsive {
       @include respond-to(tablet) {
@@ -365,15 +369,11 @@
     }
 
     .ark-block-section__color {
-      background-color: #9b51e0;
       opacity: 1;
-      height: 100vh;
-      width: 100vw;
       background-attachment: fixed;
       background-size: cover;
       background-image: url(https://lc-plus.net/wp-content/themes/lcplus/images/strength.webp);
       background-color: initial !important;
-      top: -60px;
       z-index: -1;
       filter: opacity(0.15);
     }

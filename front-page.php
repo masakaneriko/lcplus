@@ -36,7 +36,7 @@ get_header(); ?>
   <div class="alignfull" id="test" style="background: orange;">
     <p style="color: white;">test</p>
 
-    <svg width="1920" height="910" viewBox="0 0 1920 910" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="svg_animate" width="1920" height="910" viewBox="0 0 1920 910" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="1920" height="910" fill="#BAC2C7" />
       <g id="masa_lottie_test">
         <rect width="14723" height="5500" transform="translate(-12403 -488)" fill="white" />
