@@ -178,7 +178,7 @@
   }
 
   // PHILOSOPHY SECTION (communication | idea | happy | equals)
-  #communication .ark-block-column {
+  :is(#communication, #idea, #happy) .ark-block-column {
     position: relative;
   }
 
@@ -188,7 +188,7 @@
     position: absolute;
     top: 0;
     margin: 0;
-    height: 100%;
+    height: auto;
     width: 50%;
     display: flex;
     align-items: center;
