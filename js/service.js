@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       start: "top 80%",
       // markers: true,
     },
-    y: 250,
+    y: 200,
     autoAlpha: 0,
     stagger: 0.3,
     duration: 1.3,

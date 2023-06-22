@@ -19,6 +19,7 @@
       position: absolute;
       top: 20%;
       transform: rotate(-13deg);
+      max-width: 90%;
     }
 
     .hero-text {
@@ -215,6 +216,13 @@
   }
 
   #idea {
+    background: radial-gradient(circle, #fbfbee 0%, get-color(secondary) 100%);
+    background-position: left;
+    background-size: 200%;
+
+    p:not(.arkp-gnRichClmn01__subHeading) {
+      text-shadow: 2px 2px white;
+    }
     // parallax, overriding the arkhe bg color
     .ark-block-section__color {
       height: 100vh;
@@ -346,8 +354,8 @@
     // --arkb-padding: 8rem 0;
 
     @include respond-to(tablet) {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+      padding-top: 8rem;
+      padding-bottom: 8rem;
 
       .container {
         max-width: 80%;

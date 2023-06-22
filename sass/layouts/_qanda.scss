@@ -20,12 +20,12 @@
     }
   }
   .arkp-scFaq01 .ark-block-accordion__body {
-    background: lighten(get-color(accent), 27);
+    background: get-color(secondary);
     border-radius: (0 0 var(--arkp--title--bdr-radius) var(--arkp--title--bdr-radius));
 
     &::before {
       color: get-color(secondary);
-      // background: get-color(raisin-black);
+      background: get-color(primary);
     }
   }
 

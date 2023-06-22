@@ -66,7 +66,7 @@ p {
 }
 
 .plus-divider {
-  margin: 2rem auto;
+  margin: 0 auto;
   display: flex;
   max-width: min(850px, 90%);
   justify-content: space-around;
@@ -284,11 +284,12 @@ p {
   border-radius: var(--arkp--title--bdr-radius) var(--arkp--title--bdr-radius) 0 0;
 }
 .qanda .arkp-scFaq01 .ark-block-accordion__body {
-  background: #fcdfde;
+  background: #f7f7f7;
   border-radius: 0 0 var(--arkp--title--bdr-radius) var(--arkp--title--bdr-radius);
 }
 .qanda .arkp-scFaq01 .ark-block-accordion__body::before {
   color: #f7f7f7;
+  background: #9bc1bc;
 }
 .qanda .ark-block-section__bodyInner {
   --arkb-padding: 2rem 0;
@@ -317,6 +318,7 @@ p {
   position: absolute;
   top: 20%;
   transform: rotate(-13deg);
+  max-width: 90%;
 }
 .page-id-8 #hero .hero-text {
   width: 100%;
@@ -475,6 +477,14 @@ p {
   justify-content: center;
   animation: pop 1900ms infinite alternate-reverse ease-in-out;
   top: -10%;
+}
+.page-id-8 #idea {
+  background: radial-gradient(circle, #fbfbee 0%, #f7f7f7 100%);
+  background-position: left;
+  background-size: 200%;
+}
+.page-id-8 #idea p:not(.arkp-gnRichClmn01__subHeading) {
+  text-shadow: 2px 2px white;
 }
 .page-id-8 #idea .ark-block-section__color {
   height: 100vh;
@@ -730,6 +740,9 @@ p {
   border: 1px solid #313638;
 }
 
+#flow {
+  padding-bottom: 2rem;
+}
 #flow .ark-block-step.is-style-default .ark-block-step__item {
   display: flex;
   flex-direction: column;
