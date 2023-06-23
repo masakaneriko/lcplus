@@ -421,16 +421,6 @@ p {
     transform: rotate(0deg);
   }
 }
-.page-id-8 #test svg {
-  max-width: 100%;
-  stroke-dasharray: 6000;
-  stroke-dashoffset: 6000;
-}
-@keyframes animateDash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
 .page-id-8 .group-slider h3 {
   text-align: center;
   margin: 8rem 0 3rem;
@@ -478,11 +468,13 @@ p {
 }
 .page-id-8 .happy-image {
   width: 100%;
+  height: 100%;
   justify-content: center;
   animation: pop 1900ms infinite alternate-reverse ease-in-out;
   top: -10%;
 }
 .page-id-8 #idea {
+  overflow: hidden;
   background: radial-gradient(circle, #fbfbee 0%, #f7f7f7 100%);
   background-position: left;
   background-size: 200%;
@@ -512,21 +504,44 @@ p {
     background-position: 200vw 100vh;
   }
 }
+.page-id-8 #equals {
+  position: relative;
+  padding: 6rem 0;
+}
 @media (min-width: 600px) {
-  .page-id-8 #equals .equal-sign {
+  .page-id-8 #equals {
     padding: 4rem 0;
   }
 }
-.page-id-8 #equals .equal-sign img {
-  width: min(67px, 15%);
+.page-id-8 #equals .bg_svg svg {
+  max-width: 100vw;
+  height: 100%;
+  width: 100%;
+  stroke-dasharray: 6000;
+  stroke-dashoffset: 6000;
 }
-@media (min-width: 600px) {
-  .page-id-8 #equals .spacer-responsive {
-    height: 140px !important;
-  }
+.page-id-8 #equals .content {
+  position: absolute;
+  inset: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4vw;
+  align-items: center;
+  justify-content: center;
+}
+.page-id-8 #equals .content img {
+  width: min(7vw, 60px);
+  padding-bottom: 4vw;
+}
+.page-id-8 #equals .content h2 {
+  padding-bottom: 9vw;
 }
 .page-id-8 #equals .highlight > span {
-  background-image: linear-gradient(#9bc1bc, #9bc1bc);
+  background-image: linear-gradient(#ef6461, #ef6461);
   background-size: 0 40%;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -534,6 +549,12 @@ p {
 }
 .page-id-8 #equals .highlight > span.active {
   background-size: 100% 40%;
+}
+.page-id-8 #equals .ark-block-section__body {
+  max-width: 100vw;
+}
+.page-id-8 .plus-divider {
+  margin: 2rem auto;
 }
 @media (min-width: 600px) {
   .page-id-8 .plus-divider {
