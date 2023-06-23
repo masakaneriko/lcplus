@@ -36,7 +36,6 @@
 
 // Wait for the DOM to be loaded
 document.addEventListener("DOMContentLoaded", function () {
-
   // new timeline
   const tl2 = gsap.timeline();
 
@@ -48,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
     x: -500,
     rotation: -360,
     duration: 1,
-    // delay: 1,
     ease: "easeIn",
   });
 
@@ -85,15 +83,13 @@ document.addEventListener("DOMContentLoaded", function () {
     ">-0.7"
   );
 
-  
   // for flow section
-  const flowItem = document.querySelectorAll("#flow .ark-block-step__item");
+  const flowItem = gsap.utils.toArray("#flow .ark-block-step__item");
 
   gsap.from(flowItem, {
     scrollTrigger: {
       trigger: flowItem,
       start: "top 80%",
-      // markers: true,
     },
     y: 200,
     autoAlpha: 0,
@@ -109,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // trigger: ".scrololol",
       scrub: 1,
       // start: 'top 80%',
-      // markers: true,
       end: "+=500",
     },
     rotation: 1440,
@@ -122,7 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: ".scrotate2 > figure > img",
       scrub: 3,
       start: "top 90%",
-      // markers: true,
       end: "+=500",
     },
     rotation: "-1440",
@@ -138,7 +132,6 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: "#spinner > img",
       scrub: 1,
       start: "top bottom",
-      // markers: true,
     },
     rotation: 360,
     duration: 1,
@@ -163,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTrigger: {
       trigger: ".plus-divider",
       start: "top bottom",
-      // markers: true,
       // toggleActions: 'play none none reset',
     },
     // rotation: '+=1200',
@@ -174,54 +166,70 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Fade-in
-  const fadeInElements = document.querySelectorAll(".fadein");
+  const fadeInElements = gsap.utils.toArray(".fadein");
 
   fadeInElements.forEach((element) => {
-    gsap.from(element, {
-      scrollTrigger: {
-        trigger: element,
-        start: "top 90%",
-        // markers: true,
-        // toggleActions: "play none none none",
+    gsap.fromTo(
+      element,
+      {
+        autoAlpha: 0,
       },
-      opacity: 0,
-      duration: 1.7,
-      delay: 0.3,
-    });
+      {
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+        },
+        autoAlpha: 1,
+        duration: 1.7,
+        delay: 0.3,
+      }
+    );
   });
 
   // Fade-in Up
-  const fadeInUpElements = document.querySelectorAll(".fadein-up");
-
-  fadeInUpElements.forEach((element) => {
-    gsap.from(element, {
-      scrollTrigger: {
-        trigger: element,
-        start: "top 90%",
-        // markers: true,
-        // toggleActions: "play none none none",
+  const fadeInUpElements = gsap.utils.toArray(".fadein-up");
+  fadeInUpElements.forEach((item) => {
+    gsap.fromTo(
+      item,
+      {
+        autoAlpha: 0,
+        y: 100,
       },
-      opacity: 0,
-      y: 100,
-      duration: 1.3,
-    });
+      {
+        autoAlpha: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: item,
+          start: "top bottom",
+        },
+        ease: "sine.out",
+        duration: 0.7,
+      }
+    );
   });
 
   // Scale from 0
-  const scaleOut = document.querySelectorAll(".scale-out");
+  const scaleOut = gsap.utils.toArray(".scale-out");
 
   scaleOut.forEach((element) => {
-    gsap.from(element, {
-      scrollTrigger: {
-        trigger: element,
-        start: "top 90%",
+    gsap.fromTo(
+      element,
+      {
+        autoAlpha: 0,
+        scale: 0,
       },
-      scale: 0,
-      ease: "back",
-      // ease: "power2.inOut",
-      duration: 1.3,
-      opacity: 0,
-      // delay: 0.3,
-    });
+      {
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+        },
+        autoAlpha: 1,
+        scale: 1,
+        ease: "back",
+        // ease: "power2.inOut",
+        duration: 1.3,
+        delay: 0.3,
+      }
+    );
   });
 });

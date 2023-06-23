@@ -73,20 +73,18 @@ document.addEventListener("DOMContentLoaded", function () {
         delay: i * 0.06,
         scrollTrigger: {
           trigger: charElement,
-          start: "top 80%", // start fade-in animation when 80% of the element is visible in the viewport
+          start: "top 80%",
         },
       }
     );
   }
 
   // Concerns Section
-  const concernItems = document.querySelectorAll(".concern_list_item");
+  const concernItems = gsap.utils.toArray(".concern_list_item");
   gsap.from(concernItems, {
     scrollTrigger: {
       trigger: ".concern_list",
       start: "top 90%",
-      // markers: true,
-      // toggleActions: 'play none none reset',
     },
     y: 100,
     stagger: 0.6,
@@ -96,85 +94,133 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Fade-in
-  // const fadeInElements = document.querySelectorAll(".fadein");
+  const fadeInElements = gsap.utils.toArray(".fadein");
 
-  // fadeInElements.forEach((element) => {
+  fadeInElements.forEach((element) => {
+    gsap.fromTo(
+      element,
+      {
+        autoAlpha: 0,
+      },
+      {
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+        },
+        autoAlpha: 1,
+        duration: 1.7,
+        delay: 0.3,
+      }
+    );
+  });
+
+  // Fade-in Up
+  // const fadeInUpElements = document.querySelectorAll(".fadein-up");
+
+  // fadeInUpElements.forEach((element) => {
   //   gsap.from(element, {
   //     scrollTrigger: {
   //       trigger: element,
   //       start: "top 90%",
-  //       // markers: true,
   //       // toggleActions: "play none none none",
   //     },
   //     opacity: 0,
-  //     duration: 1.7,
-  //     delay: 0.3,
+  //     y: 100,
+  //     duration: 1.3,
   //   });
   // });
 
-  // Fade-in Up
-  const fadeInUpElements = document.querySelectorAll(".fadein-up");
-
-  fadeInUpElements.forEach((element) => {
-    gsap.from(element, {
-      scrollTrigger: {
-        trigger: element,
-        start: "top 90%",
-        // markers: true,
-        // toggleActions: "play none none none",
+  // NEW Fade-in up
+  // using gsap.utils.toArray instead of querySelectorAll
+  const fadeInUpElements = gsap.utils.toArray(".fadein-up");
+  fadeInUpElements.forEach((item) => {
+    gsap.fromTo(
+      item,
+      {
+        autoAlpha: 0,
+        y: 100,
       },
-      opacity: 0,
-      y: 100,
-      duration: 1.3,
-    });
+      {
+        autoAlpha: 1,
+        y: 0,
+        scrollTrigger: {
+          trigger: item,
+          start: "top bottom",
+          // markers: true,
+        },
+        ease: "sine.out",
+        duration: 0.7,
+      }
+    );
   });
 
   // Fade-in Right
-  const fadeInRightElements = document.querySelectorAll(".fadein-right");
+  const fadeInRightElements = gsap.utils.toArray(".fadein-right");
 
   fadeInRightElements.forEach((element) => {
-    gsap.from(element, {
-      scrollTrigger: {
-        trigger: element,
-        start: "top 90%",
+    gsap.fromTo(
+      element,
+      {
+        autoAlpha: 0,
+        x: -100,
       },
-      opacity: 0,
-      x: -100,
-      duration: 1.3,
-    });
+      {
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+        },
+        autoAlpha: 1,
+        x: 0,
+        duration: 1.3,
+      }
+    );
   });
 
   // Fade-in Left
-  const fadeInLeftElements = document.querySelectorAll(".fadein-left");
+  const fadeInLeftElements = gsap.utils.toArray(".fadein-left");
 
   fadeInLeftElements.forEach((element) => {
-    gsap.from(element, {
-      scrollTrigger: {
-        trigger: element,
-        start: "top 90%",
+    gsap.fromTo(
+      element,
+      {
+        autoAlpha: 0,
+        x: 100,
       },
-      opacity: 0,
-      x: 100,
-      duration: 1.3,
-    });
+      {
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+        },
+        autoAlpha: 1,
+        x: 0,
+        duration: 1.3,
+      }
+    );
   });
 
   // Scale from 0
-  const scaleOut = document.querySelectorAll(".scale-out");
+  const scaleOut = gsap.utils.toArray(".scale-out");
 
   scaleOut.forEach((element) => {
-    gsap.from(element, {
-      scrollTrigger: {
-        trigger: element,
-        start: "top 90%",
+    gsap.fromTo(
+      element,
+      {
+        autoAlpha: 0,
+        scale: 0,
       },
-      scale: 0,
-      ease: "back",
-      // ease: "power2.inOut",
-      duration: 1.3,
-      opacity: 0,
-      delay: 0.3,
-    });
+      {
+        scrollTrigger: {
+          trigger: element,
+          start: "top 90%",
+        },
+        autoAlpha: 1,
+        scale: 1,
+        ease: "back",
+        // ease: "power2.inOut",
+        duration: 1.3,
+        delay: 0.3,
+      }
+    );
   });
 
   // Equals Section highlight text
@@ -191,12 +237,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Plus divider
-  const plusDivider = document.querySelectorAll(".plus-divider > span");
+  const plusDivider = gsap.utils.toArray(".plus-divider > span");
   gsap.from(plusDivider, {
     scrollTrigger: {
       trigger: ".plus-divider",
       start: "top 80%",
-      // markers: true,
       // toggleActions: 'play none none reset',
     },
     // rotation: '+=1200',
