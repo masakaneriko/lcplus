@@ -255,13 +255,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const tl_svg = gsap.timeline();
 
   // Add animation to the timeline
-  tl_svg.to(".svg_animate", { strokeDashoffset: 0, duration: 5, ease: "linear" });
+  tl_svg.to(".svg_animate", { strokeDashoffset: 0, duration: 9, ease: "linear" });
 
   // Create ScrollTrigger
   ScrollTrigger.create({
     animation: tl_svg,
     trigger: ".svg_animate",
-    start: "top 10%",
-    markers: true,
+    start: "30% center",
+    // markers: true,
   });
 });
