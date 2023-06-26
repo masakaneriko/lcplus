@@ -86,6 +86,7 @@
   #about {
     .ark-block-section__body {
       padding: 4rem 0;
+      max-width: 100vw!important;
     }
     .ark-block-section__bodyInner {
       background: get-color(secondary);
@@ -251,6 +252,7 @@
       max-width: 100vw;
     }
 
+    // using gsap to animate svg 
     // #test {
     //   svg {
     //     max-width: 100%;
@@ -409,59 +411,3 @@
   }
 }
 
-.lc-rotate {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: -1;
-  // right: 10px;
-  // bottom: 100px;
-  // width: 100px;
-
-  // @include respond-to(tablet) {
-  //   width: 300px;
-  // }
-  width: 180vw;
-  right: -90vw;
-  bottom: 0;
-
-  .lc-rotate-text {
-    position: absolute;
-    animation: spin 40s linear reverse infinite;
-    // animation: spin 10s linear reverse infinite, blowup 1500ms ease-in-out infinite alternate-reverse;
-  }
-  @keyframes blowup {
-    from {
-      transform: scale(0) rotate(0deg);
-    }
-    to {
-      transform: scale(5) rotate(360deg);
-    }
-  }
-
-  .lc-rotate-plus {
-    position: absolute;
-    max-width: 60%;
-    // animation: spin 1s linear infinite;
-  }
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes ticktock {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(2deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-}

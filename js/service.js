@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
       trigger: "#spinner > img",
       scrub: 1,
       start: "top bottom",
+      end: "top 75%",
     },
     rotation: 360,
     duration: 1,

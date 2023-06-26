@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ScrollTrigger.create({
     animation: tl_svg,
     trigger: ".svg_animate",
-    start: "30% center",
+    start: "27% center",
     // markers: true,
   });
 });

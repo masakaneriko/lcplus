@@ -112,6 +112,17 @@
   .ark-block-column {
     figure {
       box-shadow: 1px 1px 3px get-color(slate);
+      max-height: 238px;
+      height: 100%;
+      @include respond-to(tablet) {
+        max-height: 384px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
     .arkp-gnRichClmn05__itemTtl {
       color: get-color(primary, dark);
