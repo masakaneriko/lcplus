@@ -231,6 +231,7 @@ p {
 
 #footer {
   background: #9bc1bc;
+  overflow: hidden;
 }
 #footer .l-container {
   max-width: 1000px;
@@ -271,6 +272,51 @@ p {
 }
 #footer .c-copyright {
   color: white;
+}
+#footer .lc-rotate {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  width: 180vw;
+  right: -90vw;
+  bottom: 0;
+}
+#footer .lc-rotate .lc-rotate-text {
+  position: absolute;
+  animation: spin 40s linear reverse infinite;
+}
+@keyframes blowup {
+  from {
+    transform: scale(0) rotate(0deg);
+  }
+  to {
+    transform: scale(5) rotate(360deg);
+  }
+}
+#footer .lc-rotate .lc-rotate-plus {
+  position: absolute;
+  max-width: 60%;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ticktock {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .l-header__center {
@@ -376,55 +422,13 @@ p {
     right: -27%;
   }
 }
-.page-id-8 .lc-rotate {
-  position: absolute;
-  display: flex;
-  width: 100px;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-  right: 10px;
-  bottom: 100px;
+.page-id-8 #about .ark-block-section__body {
+  padding: 4rem 0;
 }
-@media (min-width: 600px) {
-  .page-id-8 .lc-rotate {
-    width: 300px;
-  }
-}
-.page-id-8 .lc-rotate .lc-rotate-text {
-  position: absolute;
-  animation: spin 40s linear reverse infinite;
-}
-@keyframes blowup {
-  from {
-    transform: scale(0) rotate(0deg);
-  }
-  to {
-    transform: scale(5) rotate(360deg);
-  }
-}
-.page-id-8 .lc-rotate .lc-rotate-plus {
-  position: absolute;
-  max-width: 60%;
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@keyframes ticktock {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(2deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+.page-id-8 #about .ark-block-section__bodyInner {
+  background: #f7f7f7;
+  padding-left: var(--ark-padding--container, 0);
+  padding-right: var(--ark-padding--container, 0);
 }
 .page-id-8 .group-slider h3 {
   text-align: center;
@@ -667,6 +671,52 @@ p {
 }
 .page-id-8 #price .swiper-pagination-bullet-active {
   background: #9bc1bc;
+}
+
+.lc-rotate {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  width: 180vw;
+  right: -90vw;
+  bottom: 0;
+}
+.lc-rotate .lc-rotate-text {
+  position: absolute;
+  animation: spin 40s linear reverse infinite;
+}
+@keyframes blowup {
+  from {
+    transform: scale(0) rotate(0deg);
+  }
+  to {
+    transform: scale(5) rotate(360deg);
+  }
+}
+.lc-rotate .lc-rotate-plus {
+  position: absolute;
+  max-width: 60%;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes ticktock {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 #service_hero {

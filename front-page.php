@@ -25,10 +25,6 @@ get_header(); ?>
         <img class="hero-image-right" src="<?php echo get_stylesheet_directory_uri(); ?>/images/hero_2.png" alt="image of people in a video call">
       </div>
     </section>
-    <!-- <div class="lc-rotate">
-      <img class="lc-rotate-text" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rotate_lc_text.svg" alt="rotating text for life communication plus">
-      <img class="lc-rotate-plus" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rotate-lc-plus.png" alt="icon of a plus sign">
-    </div> -->
   </div>
   
   <?php
