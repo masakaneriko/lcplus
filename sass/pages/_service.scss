@@ -93,7 +93,7 @@
         order: 2;
         width: min(450px, 30vw);
         position: relative;
-        top: -3em;
+        top: -4em;
       }
       img {
         max-height: 300px;
@@ -104,6 +104,7 @@
     }
   }
 }
+
 // Price Section
 #works {
   scroll-margin-top: 8rem; // this might need a bit more adjusting
@@ -121,6 +122,7 @@
   }
 }
 
+// Strength Section
 #strength {
   .ark-block-section__color {
     background-attachment: fixed;
@@ -130,6 +132,53 @@
     background-color: initial !important;
     z-index: -1;
     filter: opacity(0.15);
+  }
+  .arkp-scFeatureList04__itemIcon {
+    display: none!important;
+  }
+  .number {
+    color: #fff;
+    background: black;
+    width: min(25vw, 128px);
+    height: min(25vw, 128px);
+    border-radius: 50%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    position: relative;
+    &::before {
+      content: url("https://lc-plus.net/wp-content/themes/lcplus/images/rotate_lc_text_color.svg");
+      width: min(25vw, 128px);
+      height: min(25vw, 128px);
+      position: absolute;
+      animation: spin 40s linear reverse infinite;
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .ark-block-column {
+    &:nth-child(2) {
+      .number {
+        &::before {
+          animation: spin 40s linear 2s reverse infinite;
+        }
+      }
+    }
+    &:nth-child(3) {
+      .number {
+        &::before {
+          animation: spin 40s linear 4s reverse infinite;
+        }
+      }
+    }
   }
 }
 

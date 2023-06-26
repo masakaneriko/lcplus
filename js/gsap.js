@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const tl_svg = gsap.timeline();
 
   // Add animation to the timeline
-  tl_svg.to(".svg_animate", { strokeDashoffset: 0, duration: 9, ease: "linear" });
+  tl_svg.to(".svg_animate", { strokeDashoffset: 0, duration: 7, ease: "linear" });
 
   // Create ScrollTrigger
   ScrollTrigger.create({

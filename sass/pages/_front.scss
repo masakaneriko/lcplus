@@ -5,7 +5,7 @@
     // background-size: contain;
     background-size: cover;
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    overflow: hidden;
     height: 90vh;
     position: relative;
     display: flex;
@@ -14,10 +14,11 @@
     justify-content: center;
     align-content: center;
     visibility: hidden;
+    padding: 2rem 0;
 
     #lottie {
       position: absolute;
-      top: 20%;
+      top: 20vh;
       transform: rotate(-13deg);
       width: 90%;
       height: auto;
@@ -36,7 +37,7 @@
     .hero-image {
       position: relative;
       display: block;
-      max-width: 500px;
+      max-width: min(500px, 80%);
       margin: auto;
 
       img {
@@ -363,6 +364,9 @@
         }
       }
       &:nth-child(3) {
+        figure {
+          padding: 1.6rem;
+        }
         img {
           animation: hop 1900ms infinite alternate-reverse ease-in-out;
         }

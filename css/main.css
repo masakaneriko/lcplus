@@ -35,6 +35,10 @@ a {
 .telephone a {
   color: #9bc1bc;
   text-decoration: underline;
+  transition: all 300ms;
+}
+.telephone a:hover {
+  color: #62a59f;
 }
 
 body {
@@ -308,7 +312,7 @@ p {
   background: url(../images/bg_washii.webp);
   background-size: cover;
   background-repeat: no-repeat;
-  overflow-x: hidden;
+  overflow: hidden;
   height: 90vh;
   position: relative;
   display: flex;
@@ -317,10 +321,11 @@ p {
   justify-content: center;
   align-content: center;
   visibility: hidden;
+  padding: 2rem 0;
 }
 .page-id-8 #hero #lottie {
   position: absolute;
-  top: 20%;
+  top: 20vh;
   transform: rotate(-13deg);
   width: 90%;
   height: auto;
@@ -333,7 +338,7 @@ p {
 .page-id-8 #hero .hero-image {
   position: relative;
   display: block;
-  max-width: 500px;
+  max-width: min(500px, 80%);
   margin: auto;
 }
 .page-id-8 #hero .hero-image img {
@@ -590,6 +595,9 @@ p {
 .page-id-8 #concerns .concern_list_item:nth-child(2) img {
   animation: pop 2700ms infinite alternate-reverse ease-in-out;
 }
+.page-id-8 #concerns .concern_list_item:nth-child(3) figure {
+  padding: 1.6rem;
+}
 .page-id-8 #concerns .concern_list_item:nth-child(3) img {
   animation: hop 1900ms infinite alternate-reverse ease-in-out;
 }
@@ -739,7 +747,7 @@ p {
     order: 2;
     width: min(450px, 30vw);
     position: relative;
-    top: -3em;
+    top: -4em;
   }
 }
 #service_hero .service_hero_content .service_hero_image img {
@@ -772,6 +780,43 @@ p {
   background-color: initial !important;
   z-index: -1;
   filter: opacity(0.15);
+}
+#strength .arkp-scFeatureList04__itemIcon {
+  display: none !important;
+}
+#strength .number {
+  color: #fff;
+  background: black;
+  width: min(25vw, 128px);
+  height: min(25vw, 128px);
+  border-radius: 50%;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  position: relative;
+}
+#strength .number::before {
+  content: url("https://lc-plus.net/wp-content/themes/lcplus/images/rotate_lc_text_color.svg");
+  width: min(25vw, 128px);
+  height: min(25vw, 128px);
+  position: absolute;
+  animation: spin 40s linear reverse infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#strength .ark-block-column:nth-child(2) .number::before {
+  animation: spin 40s linear 2s reverse infinite;
+}
+#strength .ark-block-column:nth-child(3) .number::before {
+  animation: spin 40s linear 4s reverse infinite;
 }
 
 #flow {

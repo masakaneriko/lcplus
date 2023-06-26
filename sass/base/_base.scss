@@ -39,5 +39,9 @@ a {
   a {
     color: get-color(primary);
     text-decoration: underline;
+    transition: all 300ms;
+    &:hover {
+      color: get-color(primary, dark);
+    }
   }
 }
