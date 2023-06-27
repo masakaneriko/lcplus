@@ -11,6 +11,15 @@ a {
   cursor: pointer;
 }
 
+.telephone a {
+  color: #9bc1bc;
+  text-decoration: underline;
+  transition: all 300ms;
+}
+.telephone a:hover {
+  color: #62a59f;
+}
+
 #header {
   position: fixed;
 }
@@ -32,13 +41,43 @@ a {
   background-color: #9bc1bc !important;
 }
 
-.telephone a {
-  color: #9bc1bc;
-  text-decoration: underline;
-  transition: all 300ms;
+div.wpforms-container-full input[type=checkbox]:checked::before,
+div.wpforms-container-full input[type=radio]:checked::before {
+  border-color: #62a59f;
+  box-shadow: 0 0 0 1px #62a59f, 0px 1px 2px rgba(0, 0, 0, 0.15);
 }
-.telephone a:hover {
-  color: #62a59f;
+
+div.wpforms-container-full input[type=radio]:checked::after {
+  background-color: #62a59f;
+}
+
+div.wpforms-container-full input[type=date]:focus,
+div.wpforms-container-full input[type=datetime]:focus,
+div.wpforms-container-full input[type=datetime-local]:focus,
+div.wpforms-container-full input[type=email]:focus,
+div.wpforms-container-full input[type=month]:focus,
+div.wpforms-container-full input[type=number]:focus,
+div.wpforms-container-full input[type=password]:focus,
+div.wpforms-container-full input[type=range]:focus,
+div.wpforms-container-full input[type=search]:focus,
+div.wpforms-container-full input[type=tel]:focus,
+div.wpforms-container-full input[type=text]:focus,
+div.wpforms-container-full input[type=time]:focus,
+div.wpforms-container-full input[type=url]:focus,
+div.wpforms-container-full input[type=week]:focus,
+div.wpforms-container-full select:focus,
+div.wpforms-container-full textarea:focus {
+  border: 1px solid #62a59f;
+  box-shadow: 0 0 0 1px #62a59f, 0px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+div.wpforms-container-full input[type=submit]:focus::after, div.wpforms-container-full button[type=submit]:focus::after, div.wpforms-container-full .wpforms-page-button:focus::after {
+  border: 2px solid #62a59f;
+}
+
+div.wpforms-container-full .wpforms-confirmation-container-full, div[submit-success] > .wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
+  background: white;
+  border: 1px solid #62a59f;
 }
 
 body {
@@ -283,17 +322,14 @@ p {
   right: -90vw;
   bottom: 0;
 }
-#footer .lc-rotate .lc-rotate-text {
+#footer .lc-rotate .lc-rotate-skew {
   position: absolute;
-  animation: spin 40s linear reverse infinite;
+  width: 100%;
+  height: auto;
+  transform: skew(-26deg);
 }
-@keyframes blowup {
-  from {
-    transform: scale(0) rotate(0deg);
-  }
-  to {
-    transform: scale(5) rotate(360deg);
-  }
+#footer .lc-rotate .lc-rotate-skew .lc-rotate-text {
+  animation: spin 40s linear reverse infinite;
 }
 #footer .lc-rotate .lc-rotate-plus {
   position: absolute;
@@ -359,7 +395,7 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-  height: 90vh;
+  height: calc(100vh - var(--ark-header_height));
   position: relative;
   display: flex;
   flex-direction: row;
@@ -421,6 +457,15 @@ p {
   .page-id-8 #hero .hero-image .hero-image-right {
     right: -27%;
   }
+}
+.page-id-8 #hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5vh;
+  width: 100%;
+  height: 10vh;
+  background: linear-gradient(to bottom, transparent, #f7f7f7 50%);
 }
 .page-id-8 #about .ark-block-section__body {
   padding: 4rem 0;
@@ -770,7 +815,7 @@ p {
 #works .ark-block-column figure {
   box-shadow: 1px 1px 3px #727f83;
   max-height: 238px;
-  height: 100%;
+  height: auto;
 }
 @media (min-width: 600px) {
   #works .ark-block-column figure {
@@ -787,6 +832,9 @@ p {
 }
 #works .comment {
   border: 1px solid #313638;
+}
+#works .ark-block-dl__div .ark-block-dl__dd, #works .ark-block-dl__div .ark-block-dl__dt {
+  min-width: initial;
 }
 
 #strength .ark-block-section__color {
@@ -902,6 +950,7 @@ p {
 .scrotate2 {
   position: absolute;
   right: -20vw;
+  z-index: -1;
 }
 .scrotate2 img {
   width: 90px;

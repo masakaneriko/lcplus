@@ -6,7 +6,9 @@ $is_active_footer2 = is_active_sidebar('footer-2');
 ?>
 <footer id="footer" class="l-footer">
   <div class="lc-rotate">
-    <img class="lc-rotate-text" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rotate_lc_text.svg" alt="rotating text for life communication plus">
+    <div class="lc-rotate-skew">
+      <img class="lc-rotate-text" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rotate_lc_text.svg" alt="rotating text for life communication plus">
+    </div>
     <img class="lc-rotate-plus" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rotate-lc-plus.png" alt="icon of a plus sign">
   </div>
   <div class="l-footer__inner">

@@ -6,7 +6,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-    height: 90vh; // calc(100vh - var(--ark-header_height))
+    // height: 90vh;
+    height: calc(100vh - var(--ark-header_height));
     position: relative;
     display: flex;
     flex-direction: row;
@@ -79,6 +80,15 @@
       //     filter: invert(1);
       //   }
       // }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5vh;
+      width: 100%;
+      height: 10vh;
+      background: linear-gradient(to bottom, transparent, get-color(secondary) 50%);
     }
   }
 
@@ -410,4 +420,3 @@
     }
   }
 }
-

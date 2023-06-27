@@ -16,7 +16,7 @@
   // }
   background: get-color(primary);
   overflow: hidden;
-  
+
   .l-footer__widgets {
     // padding: 2rem 0 0;
   }
@@ -98,24 +98,19 @@
     right: -90vw;
     bottom: 0;
 
-    .lc-rotate-text {
+    .lc-rotate-skew {
       position: absolute;
-      animation: spin 40s linear reverse infinite;
-      // animation: spin 10s linear reverse infinite, blowup 1500ms ease-in-out infinite alternate-reverse;
-    }
-    @keyframes blowup {
-      from {
-        transform: scale(0) rotate(0deg);
-      }
-      to {
-        transform: scale(5) rotate(360deg);
+      width: 100%;
+      height: auto;
+      transform: skew(-26deg);
+      .lc-rotate-text {
+        animation: spin 40s linear reverse infinite;
       }
     }
-
     .lc-rotate-plus {
       position: absolute;
       max-width: 60%;
-      // animation: spin 1s linear infinite;
+      // animation: spin 40s linear reverse infinite;
     }
     @keyframes spin {
       from {

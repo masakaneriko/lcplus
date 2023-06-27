@@ -113,7 +113,7 @@
     figure {
       box-shadow: 1px 1px 3px get-color(slate);
       max-height: 238px;
-      height: 100%;
+      height: auto;
       @include respond-to(tablet) {
         max-height: 384px;
       }
@@ -130,6 +130,9 @@
   }
   .comment {
     border: 1px solid get-color(raisin-black);
+  }
+  .ark-block-dl__div .ark-block-dl__dd, .ark-block-dl__div .ark-block-dl__dt {
+    min-width: initial;
   }
 }
 
@@ -275,6 +278,7 @@
 .scrotate2 {
   position: absolute;
   right: -20vw;
+  z-index: -1;
 
   img {
     width: 90px;

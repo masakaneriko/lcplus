@@ -8,6 +8,16 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+.telephone {
+  a {
+    color: get-color(primary);
+    text-decoration: underline;
+    transition: all 300ms;
+    &:hover {
+      color: get-color(primary, dark);
+    }
+  }
+}
 
 // changed arkhe's default header position: sticky to fixed
 // in response to parallax effects breaking navbar on scroll
@@ -18,7 +28,6 @@ a {
   top: var(--ark-header_height);
 }
 
-
 // Arkhe's global nav
 .c-gnav .__mainText {
   font-weight: 700;
@@ -27,21 +36,45 @@ a {
   // position: fixed;
 }
 
+// wpforms stuff
 .wpforms-submit-container {
   display: flex;
   justify-content: center;
 }
 .wpforms-submit {
-  background-color: get-color(primary)!important;
+  background-color: get-color(primary) !important;
 }
-
-.telephone {
-  a {
-    color: get-color(primary);
-    text-decoration: underline;
-    transition: all 300ms;
-    &:hover {
-      color: get-color(primary, dark);
-    }
-  }
+div.wpforms-container-full input[type="checkbox"]:checked::before,
+div.wpforms-container-full input[type="radio"]:checked::before {
+  border-color: get-color(primary, dark);
+  box-shadow: 0 0 0 1px get-color(primary, dark), 0px 1px 2px rgba(0, 0, 0, 0.15);
+}
+div.wpforms-container-full input[type="radio"]:checked::after {
+  background-color: get-color(primary, dark);
+}
+div.wpforms-container-full input[type="date"]:focus,
+div.wpforms-container-full input[type="datetime"]:focus,
+div.wpforms-container-full input[type="datetime-local"]:focus,
+div.wpforms-container-full input[type="email"]:focus,
+div.wpforms-container-full input[type="month"]:focus,
+div.wpforms-container-full input[type="number"]:focus,
+div.wpforms-container-full input[type="password"]:focus,
+div.wpforms-container-full input[type="range"]:focus,
+div.wpforms-container-full input[type="search"]:focus,
+div.wpforms-container-full input[type="tel"]:focus,
+div.wpforms-container-full input[type="text"]:focus,
+div.wpforms-container-full input[type="time"]:focus,
+div.wpforms-container-full input[type="url"]:focus,
+div.wpforms-container-full input[type="week"]:focus,
+div.wpforms-container-full select:focus,
+div.wpforms-container-full textarea:focus {
+  border: 1px solid get-color(primary, dark);
+  box-shadow: 0 0 0 1px get-color(primary, dark), 0px 1px 2px rgba(0, 0, 0, 0.15);
+}
+div.wpforms-container-full input[type="submit"]:focus::after, div.wpforms-container-full button[type="submit"]:focus::after, div.wpforms-container-full .wpforms-page-button:focus::after {
+  border: 2px solid get-color(primary, dark);
+}
+div.wpforms-container-full .wpforms-confirmation-container-full, div[submit-success] > .wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
+  background: white;
+  border: 1px solid get-color(primary, dark);
 }
