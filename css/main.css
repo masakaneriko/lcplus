@@ -318,22 +318,25 @@ p {
   justify-content: center;
   align-items: center;
   z-index: -1;
-  width: 180vw;
-  right: -90vw;
-  bottom: 0;
+  width: 145vw;
+  right: -55vw;
+  bottom: 20%;
+  transform: skew(-26deg);
 }
 #footer .lc-rotate .lc-rotate-skew {
   position: absolute;
   width: 100%;
   height: auto;
-  transform: skew(-26deg);
 }
 #footer .lc-rotate .lc-rotate-skew .lc-rotate-text {
   animation: spin 40s linear reverse infinite;
 }
 #footer .lc-rotate .lc-rotate-plus {
   position: absolute;
-  max-width: 60%;
+  width: 100%;
+  height: auto;
+  max-width: 10%;
+  animation: spin 40s linear reverse infinite;
 }
 @keyframes spin {
   from {
@@ -395,7 +398,7 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-  height: calc(100vh - var(--ark-header_height));
+  min-height: calc(100vh - var(--ark-header_height));
   position: relative;
   display: flex;
   flex-direction: row;
@@ -425,6 +428,9 @@ p {
 }
 .page-id-8 #hero .hero-image img {
   display: block;
+  aspect-ratio: 1/1;
+  width: 100%;
+  object-fit: contain;
 }
 .page-id-8 #hero .hero-image .hero-image-left,
 .page-id-8 #hero .hero-image .hero-image-right {
@@ -487,6 +493,8 @@ p {
 }
 .page-id-8 .group-slider .swiper-slide img {
   border-radius: 20px;
+  aspect-ratio: 1/1;
+  width: 100%;
 }
 .page-id-8 .group-slider .swiper-slide p {
   text-align: center;
@@ -646,7 +654,7 @@ p {
   animation: pop 2700ms infinite alternate-reverse ease-in-out;
 }
 .page-id-8 #concerns .concern_list_item:nth-child(3) figure {
-  padding: 1.6rem;
+  padding: 1.3rem;
 }
 .page-id-8 #concerns .concern_list_item:nth-child(3) img {
   animation: hop 1900ms infinite alternate-reverse ease-in-out;
@@ -748,12 +756,7 @@ p {
 }
 #service_hero .service_title h1 {
   color: #313638;
-  font-size: 3rem;
-}
-@media (min-width: 1000px) {
-  #service_hero .service_title h1 {
-    font-size: 8rem;
-  }
+  font-size: clamp(3rem, -4.5rem + 20vw, 8rem);
 }
 #service_hero .service_title .service_title_plus {
   width: 3rem;
@@ -774,7 +777,7 @@ p {
   margin-inline: auto;
   row-gap: 2rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
   #service_hero .service_hero_content {
     flex-direction: row;
     max-width: 1200px;
@@ -792,7 +795,7 @@ p {
   animation: pop 2300ms ease-in-out infinite alternate-reverse;
   max-width: 80%;
 }
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
   #service_hero .service_hero_content .service_hero_image {
     order: 2;
     width: min(450px, 30vw);
@@ -803,7 +806,7 @@ p {
 #service_hero .service_hero_content .service_hero_image img {
   max-height: 300px;
 }
-@media (min-width: 600px) {
+@media (min-width: 1000px) {
   #service_hero .service_hero_content .service_hero_image img {
     max-height: 500px;
   }
@@ -814,18 +817,13 @@ p {
 }
 #works .ark-block-column figure {
   box-shadow: 1px 1px 3px #727f83;
-  max-height: 238px;
-  height: auto;
-}
-@media (min-width: 600px) {
-  #works .ark-block-column figure {
-    max-height: 384px;
-  }
 }
 #works .ark-block-column figure img {
-  height: 100%;
+  height: auto;
   width: 100%;
   object-fit: cover;
+  max-height: 384px;
+  aspect-ratio: 3/2;
 }
 #works .ark-block-column .arkp-gnRichClmn05__itemTtl {
   color: #62a59f;

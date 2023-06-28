@@ -100,4 +100,4 @@ function enqueue_google_tag_manager()
   <!-- End Google Tag Manager -->
 <?php
 }
-// add_action('wp_head', 'enqueue_google_tag_manager');
+add_action('wp_head', 'enqueue_google_tag_manager');

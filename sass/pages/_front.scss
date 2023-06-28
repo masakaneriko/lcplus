@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     overflow: hidden;
     // height: 90vh;
-    height: calc(100vh - var(--ark-header_height));
+    min-height: calc(100vh - var(--ark-header_height));
     position: relative;
     display: flex;
     flex-direction: row;
@@ -43,6 +43,9 @@
 
       img {
         display: block;
+        aspect-ratio: 1/1;
+        width: 100%;
+        object-fit: contain;
       }
       .hero-image-left,
       .hero-image-right {
@@ -119,6 +122,8 @@
     .swiper-slide {
       img {
         border-radius: 20px;
+        aspect-ratio: 1/1;
+        width: 100%;
       }
       p {
         text-align: center;
@@ -332,7 +337,7 @@
       }
       &:nth-child(3) {
         figure {
-          padding: 1.6rem;
+          padding: 1.3rem;
         }
         img {
           animation: hop 1900ms infinite alternate-reverse ease-in-out;

@@ -94,23 +94,30 @@
     // @include respond-to(tablet) {
     //   width: 300px;
     // }
-    width: 180vw;
-    right: -90vw;
-    bottom: 0;
+    // width: 180vw;
+    // right: -90vw;
+    // bottom: 0;
+    width: 145vw;
+    right: -55vw;
+    bottom: 20%;
+    transform: skew(-26deg);
 
     .lc-rotate-skew {
       position: absolute;
       width: 100%;
       height: auto;
-      transform: skew(-26deg);
+      // transform: skew(-26deg);
       .lc-rotate-text {
         animation: spin 40s linear reverse infinite;
       }
     }
     .lc-rotate-plus {
       position: absolute;
-      max-width: 60%;
-      // animation: spin 40s linear reverse infinite;
+      // max-width: 60%;
+      width: 100%;
+      height: auto;
+      max-width: 10%;
+      animation: spin 40s linear reverse infinite;
     }
     @keyframes spin {
       from {

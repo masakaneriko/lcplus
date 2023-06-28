@@ -33,7 +33,8 @@
 
     h1 {
       color: get-color(raisin-black);
-      font-size: 3rem;
+      // font-size: 3rem;
+      font-size: clamp(3rem, -4.5rem + 20vw, 8rem);
       // display: flex;
       // align-items: center;
       // padding-left: 80px;
@@ -42,7 +43,7 @@
       // margin-inline: auto;
       // margin-bottom: 2rem;
       @include respond-to(desktop) {
-        font-size: 8rem;
+        // font-size: 8rem;
         // text-indent: calc(10px + $size_lg);
       }
     }
@@ -71,7 +72,7 @@
     margin-inline: auto;
     row-gap: 2rem;
 
-    @include respond-to(tablet) {
+    @include respond-to(desktop) {
       flex-direction: row;
       max-width: 1200px;
     }
@@ -89,7 +90,7 @@
     .service_hero_image {
       animation: pop 2300ms ease-in-out infinite alternate-reverse;
       max-width: 80%;
-      @include respond-to(tablet) {
+      @include respond-to(desktop) {
         order: 2;
         width: min(450px, 30vw);
         position: relative;
@@ -97,7 +98,7 @@
       }
       img {
         max-height: 300px;
-        @include respond-to(tablet) {
+        @include respond-to(desktop) {
           max-height: 500px;
         }
       }
@@ -112,16 +113,18 @@
   .ark-block-column {
     figure {
       box-shadow: 1px 1px 3px get-color(slate);
-      max-height: 238px;
-      height: auto;
-      @include respond-to(tablet) {
-        max-height: 384px;
-      }
+      // max-height: 238px;
+      // height: auto;
+      // @include respond-to(tablet) {
+      //   max-height: 384px;
+      // }
 
       img {
-        height: 100%;
+        height: auto;
         width: 100%;
         object-fit: cover;
+        max-height: 384px;
+        aspect-ratio: 3/2;
       }
     }
     .arkp-gnRichClmn05__itemTtl {
