@@ -231,6 +231,21 @@ p {
   z-index: 1;
 }
 
+@keyframes greenpink {
+  0% {
+    background: url("https://lc-plus.net/wp-content/themes/lcplus/images/rhombus.png") no-repeat;
+    background-size: contain;
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    background: url("https://lc-plus.net/wp-content/themes/lcplus/images/rhombus_pink.png") no-repeat;
+    background-size: contain;
+    opacity: 1;
+  }
+}
 #contact::before {
   left: 0;
   top: 5%;
