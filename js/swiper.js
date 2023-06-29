@@ -41,7 +41,7 @@ const swiperPrice = new Swiper(".swiper-price", {
     modifier: 1,
     slideShadows: true,
   },
-  lazy: true,
+  // lazy: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

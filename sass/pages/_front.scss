@@ -383,13 +383,7 @@
     }
 
     .ark-block-section__color {
-      opacity: 1;
-      background-attachment: fixed;
-      background-size: cover;
-      background-image: url(https://lc-plus.net/wp-content/themes/lcplus/images/strength.webp);
-      background-color: initial !important;
-      z-index: -1;
-      filter: opacity(0.15);
+      // use the style in _services.scss instead
     }
 
     .ark-block-section__body {

@@ -142,13 +142,20 @@
 // Strength Section
 #strength {
   .ark-block-section__color {
+    height: 100%;
+    width: 100%;
     background-attachment: fixed;
     background-size: cover;
-    background-image: url(https://lc-plus.net/wp-content/themes/lcplus/images/strength.webp);
+    background-image: url(https://lc-plus.net/wp-content/themes/lcplus/images/strength.jpg);
+    background-repeat: no-repeat;
     background-position: 80% bottom;
     background-color: initial !important;
-    z-index: -1;
+    -webkit-filter: opacity(0.15);
     filter: opacity(0.15);
+
+    @supports (-webkit-touch-callout: none) {
+      background-attachment: scroll;
+    }
   }
   .arkp-scFeatureList04__itemIcon {
     display: none!important;
