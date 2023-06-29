@@ -25,7 +25,7 @@ a {
 }
 
 .l-content {
-  top: var(--ark-header_height);
+  margin-top: var(--ark-header_height);
 }
 
 .c-gnav .__mainText {
@@ -709,6 +709,10 @@ p {
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 2px 3px #727f83;
+}
+.page-id-8 #price .swiper-slide img {
+  width: 100%;
+  height: auto;
 }
 .page-id-8 #price .swiper-button-next,
 .page-id-8 #price .swiper-button-prev {

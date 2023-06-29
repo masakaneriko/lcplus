@@ -24,16 +24,22 @@ const swiper = new Swiper(".swiper", {
 // Front Page Price Slider
 const swiperPrice = new Swiper(".swiper-price", {
   loop: true,
-  spaceBetween: 30,
-  speed: 5500,
+  spaceBetween: 5,
+  breakpoints: {
+    600: {
+      spaceBetween: 30,
+    },
+  },
+  speed: 1500,
   autoplay: {
-    delay: 4000,
-    disableOnInteraction: false
+    delay: 3500,
+    disableOnInteraction: false,
   },
   effect: "coverflow",
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: 1,
+  // slidesPerView: "auto", // setting this to "auto" is skipping the 2nd slide????
   coverflowEffect: {
     rotate: 50,
     stretch: 0,

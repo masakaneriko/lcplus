@@ -9,18 +9,18 @@ function slider_price_shortcode()
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <a href="https:/lc-plus.net/web#works_h2">
-            <!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_sample_web.webp" alt="sample price list image for web" loading="lazy"> -->
-            <img src="<?php echo home_url(); ?>/wp-content/uploads/2023/06/price_sample_web.webp" alt="sample price list image for web" loading="lazy">
+            <!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_sample_web.webp" alt="sample price list image for web"> -->
+            <img src="<?php echo home_url(); ?>/wp-content/uploads/2023/06/price_sample_web.webp" alt="sample price list image for web">
           </a>
         </div>
         <div class="swiper-slide">
           <a href="https:/lc-plus.net/dtp#works">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_sample_dtp.webp" alt="sample price list for dtp" loading="lazy">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_sample_dtp.webp" alt="sample price list for dtp" >
           </a>
         </div>
         <div class="swiper-slide">
           <a href="https:/lc-plus.net/sign#works">
-            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_sample_sign.webp" alt="sample price list for sign" loading="lazy">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/price_sample_sign.webp" alt="sample price list for sign">
           </a>
         </div>
       </div>
