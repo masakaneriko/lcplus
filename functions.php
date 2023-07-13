@@ -57,11 +57,12 @@ add_action('wp_enqueue_scripts', 'front_page_enqueue_script');
 
 
 // Include shortcodes
-require_once(get_stylesheet_directory() . '/shortcodes/slider-group.php');
-require_once(get_stylesheet_directory() . '/shortcodes/slider-price.php');
 require_once(get_stylesheet_directory() . '/shortcodes/tilt-bg.php');
-// require_once(get_stylesheet_directory() . '/shortcodes/flow-chart.php');
 require_once(get_stylesheet_directory() . '/shortcodes/plus-divider.php');
+// require_once(get_stylesheet_directory() . '/shortcodes/slider-group.php');
+// require_once(get_stylesheet_directory() . '/shortcodes/slider-price.php');
+// require_once(get_stylesheet_directory() . '/shortcodes/flow-chart.php');
+
 
 
 // add scripts to service-template pages
@@ -101,3 +102,36 @@ function enqueue_google_tag_manager()
 <?php
 }
 add_action('wp_head', 'enqueue_google_tag_manager');
+
+
+
+// Custom Block using ACF Pro repeater field
+function register_blocks()
+{
+  if (!function_exists('acf_register_block')) {
+    return;
+  }
+
+  // Register 'Group Slider' block
+  acf_register_block(array(
+    'name' => 'group-slider', // use a unique name for the block
+    'title' => __('Group Slider'), // The title shown in the block editor
+    'render_template' => 'blocks/group-slider.php', // location where actual template to use for the block is found
+    'category' => 'widgets', // what category of block is this? other options are: common, formatting, layout, widgets, and embed.
+    'icon' => 'carrot', // what icon to user (from https://developer.wordpress.org/resource/dashicons)
+    'mode' => 'edit', // edit or preview
+    'keywords' => array('group', 'slider', 'swiper', 'custom', 'akane') // additional search terms to use when a user is searching for the block
+  ));
+
+  // Register 'Price Slider' block
+  acf_register_block(array(
+    'name' => 'price-slider',
+    'title' => __('Price Slider'),
+    'render_template' => 'blocks/price-slider.php',
+    'category' => 'widgets',
+    'icon' => 'buddicons-activity',
+    'mode' => 'edit',
+    'keywords' => array('price', 'slider', 'swiper', 'custom', 'akane')
+  ));
+}
+add_action('acf/init', 'register_blocks');
